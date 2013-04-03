@@ -1,0 +1,11 @@
+{% include header.html %}
+  <div class="single-post-container">
+    <h1>{{page.title}}</h1>
+    <p class="intro">{{page.summary}}</p>
+    {{ content }}
+    <p class="twitter"><a href="http://twitter.com/bleikamp">Follow me on Twitter</a></p>
+    <div class="post-meta">
+      <p>{{ page.date | date: "%d %h %Y" }}</p>
+    </div>
+  </div>
+{% include footer.html %}
