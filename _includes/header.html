@@ -1,1 +1,26 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% if page.title %}
+          {{ page.title }} | qrohlf.com
+        {% else %}
+          Quinn Rohlf :: Technologist
+        {% endif %}
+    </title>
+    <meta name="viewport" content=" initial-scale=1">
+    <link rel="icon" href="/favicon.png">
+    <link rel="alternate" type="application/rss+xml"  title="RSS"   href="/feed.xml" />
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/">Quinn Rohlf</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
