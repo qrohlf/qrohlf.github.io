@@ -42,6 +42,7 @@ pre {
     font-size: .8em;
     background: none;
     background: rgba(211, 211, 211, 0.16);
+    line-height: 1.7em;
 }
 
 p code {
@@ -56,9 +57,14 @@ p code {
 /* =Layout 
 ------------------------------*/
 body {
-	width: 30%;
-	min-width: 240px;
+	width: 50%;
+	min-width: 450px;
+    max-width: 600px;
 	margin: 3em auto 3em auto;
+}
+
+@media screen and (max-width: 480px) {
+    body {width: auto; min-width: 240px; padding: 0 15px 0 15px;}
 }
 
 header {
@@ -68,7 +74,8 @@ header {
 
 footer {
 	text-align: center;
-    margin: 1em 0 0 0;
+    margin: 3em 0 0 0;
+    color: #949384;
 }
 
 /* =Header 
@@ -100,7 +107,7 @@ nav ul li a, nav ul li a:visited {
     width: 80%;
     height: 1px;
     background-color: #D8D8D8;
-    margin: 3em auto 3em auto ;
+    margin: 2em auto 2em auto ;
 }
 
 .post h2 a {
