@@ -36,7 +36,7 @@ function innerBottomOffset(element) {
 {%endhighlight %}
 
 Combining that with the basic code for the columns, you get this:
-<iframe width="600" height="400" src="http://jsfiddle.net/bbcH7/2/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="400" src="http://jsfiddle.net/bbcH7/2/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 You can see the whole thing on [JSFiddle](http://jsfiddle.net/bbcH7/2/)
 
 That's it. A simple and responsive way to implement equal-height, vertically centered columns with responsive widths and heights using JQuery. I like it because the markup stays semantic, and you can style your columns the same way you can style any div, with border-radius, background images, etc.
