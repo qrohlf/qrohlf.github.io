@@ -6,5 +6,6 @@ layout: page
 
 I've worked as a mobile applications developer, database guy, and freelance web designer. Currently, I'm working for OSHU building websites that make health data more useful for parents and children. If you'd like to check out my resume, I've got one online at [resume.qrohlf.com](http://resume.qrohlf.com).
 
+## Want to get in touch?
 
-Besides working in the IT industry, I've also been employed as a rock climbing & backpacking guide for the University of Southern California. I climb, ski, hike, and go to college in my spare time. You can find me online on [twitter](https://twitter.com/qrohlf), [flickr](http://www.flickr.com/photos/qrohlf), and [email](mailto:qrohlf@gmail.com).
+You can say hi on [twitter](https://twitter.com/qrohlf), or send me an [email](mailto:qrohlf@gmail.com). If you're into retro stuff, my phone number is [503 427 8466](tel:+15034278466).
