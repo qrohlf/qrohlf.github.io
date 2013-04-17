@@ -8,4 +8,4 @@ layout: page
 A small Android utility for changing the ready message on older printers.
 
 ## [ExcellentResume](https://github.com/qrohlf/excellentresume)
-An XML-driven resume web app, good for people who wear multiple hats. This one is a work in progress.
+An XML-driven resume web app, good for people who wear multiple hats. I'm currently in the process of rewriting the backend to use Rails rather than PHP.
