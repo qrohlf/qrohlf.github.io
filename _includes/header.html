@@ -3,13 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>
-        {% if page.title %}
-          {{ page.title }} | qrohlf.com
-        {% else %}
-          Quinn Rohlf :: Technologist
-        {% endif %}
+        {% if page.title %}{{ page.title }} | qrohlf.com
+        {% else %} Quinn Rohlf :: Technologist{% endif %}
     </title>
     <meta name="viewport" content=" initial-scale=1">
+    {% if page.summary %}<meta name="description" content="{{ page.summary }}">{% endif %}
     <link rel="icon" href="/favicon.ico">
     <link rel="alternate" type="application/rss+xml"  title="RSS"   href="/feed.xml" />
     <link rel="stylesheet" href="/main.css" type="text/css">
