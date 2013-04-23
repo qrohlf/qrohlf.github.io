@@ -70,7 +70,7 @@ body {
 
 header {
 	text-align: center;
-    margin: 0 0 3em 0;
+    margin: 0 0 2em 0;
 }
 
 header h1 {
@@ -148,19 +148,20 @@ nav ul li a, nav ul li a:visited {
     margin: 0 0 1em 0;
 }
 
-.single-heading:after {
+.single h1:after {
     content: " ";
     display: block;
     width: 80%;
     height: 1px;
     background-color: #D8D8D8;
-    margin: .125em auto 1em auto ;
+    margin: .5em auto;
 }
 
 .intro {
     font-weight: 300;
-    font-style: italic;
-    margin: 0 0 2em 0;
+    font-size: 1.5em;
+    color: #8c8c8c;
+    margin-bottom: 2em;
 }
 
 .single .post-meta {
