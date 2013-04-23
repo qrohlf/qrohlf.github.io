@@ -5,6 +5,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 ------------------------------*/
 html {
     background: 0 0 url('images/debut_light.png') repeat;
+    border-top: 12px solid #961E00;
 }
 
 body {
@@ -60,7 +61,7 @@ body {
 	width: 70%;
 	min-width: 450px;
     max-width: 680px;
-	margin: 3em auto 3em auto;
+	margin: 1.5em auto 3em auto;
 }
 
 @media screen and (max-width: 480px) {
@@ -87,7 +88,7 @@ footer {
 ------------------------------*/
 header h1 a, header h1 a:visited {
 	text-decoration: none;
-	color: black;
+	color: #3D3D3D;
 }
 
 nav ul li {
@@ -98,7 +99,7 @@ nav ul li {
 }
 
 nav ul li a, nav ul li a:visited {
-    color: black;
+    color: #3D3D3D;
 }
 
 
