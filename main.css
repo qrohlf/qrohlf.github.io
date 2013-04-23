@@ -105,16 +105,7 @@ nav ul li a, nav ul li a:visited {
 /* =Article Listing 
 ------------------------------*/
 .post {
-    margin: 0 0 2em 0;
-}
-
-.post:after {
-    content: " ";
-    display: block;
-    width: 80%;
-    height: 1px;
-    background-color: #D8D8D8;
-    margin: 2em auto 2em auto ;
+    margin: 0 0 1.5em 0;
 }
 
 .post h2 a {
@@ -123,14 +114,20 @@ nav ul li a, nav ul li a:visited {
 }
 
 .post-content {
+    box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 1px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 10px 20px;
     margin: 0 0 .5em 0;
 }
 
 .post-meta {
     font-style: italic;
     font-size: .9em;
-    margin: .25em 0 0 .25em;
     color: #949384;
+    margin-right: 1em;
+    text-align: right;
 }
 
 /* =Single 
