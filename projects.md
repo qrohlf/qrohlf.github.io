@@ -1,6 +1,7 @@
 ---
 title: Projects
-summary: Sometimes I get to build cool things just for the sake of building them. When I do, they end up on this page.
+summary: Sometimes I get the chance to work on interesting projects and ideas in my spare time. When they're finished, they end up on this page.
+description: Sometimes I get the chance to work on interesting projects and ideas in my spare time. When they're finished, they end up on this page.
 layout: page
 ---
 

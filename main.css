@@ -164,6 +164,10 @@ nav ul li a, nav ul li a:visited {
     margin-bottom: 2em;
 }
 
+.intro a {
+    text-decoration: none;
+}
+
 .single .post-meta {
     margin: 1em 0 0 0;
 }
