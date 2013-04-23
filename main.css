@@ -16,7 +16,7 @@ body {
 }
 
 a, a:visited {
-    color: #4C1A0C;
+    color: #000;
     text-decoration: underline;
 }
 
@@ -166,6 +166,7 @@ nav ul li a, nav ul li a:visited {
 
 .intro a {
     text-decoration: none;
+    color: #484848;
 }
 
 .single .post-meta {
