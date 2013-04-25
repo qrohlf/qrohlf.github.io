@@ -7,7 +7,8 @@
         {% else %} Quinn Rohlf :: Technologist{% endif %}
     </title>
     <meta name="viewport" content=" initial-scale=1">
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    {% if page.description %}<meta name="description" content="{{ page.description }}">
+    {% elsif page.summary %}<meta name="description" content="{{ page.summary }}">{% endif %}
     <link rel="icon" href="/favicon.ico">
     <link rel="alternate" type="application/rss+xml"  title="RSS"   href="/feed.xml" />
     <link rel="stylesheet" href="/main.css" type="text/css">

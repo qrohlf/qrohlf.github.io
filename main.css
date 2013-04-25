@@ -22,10 +22,10 @@ a, a:visited {
 
 h1 {
     font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 2em;
     line-height: 1em;
-    margin: 0 0 .5em 0;
+    margin: 1.5em 0 .5em 0;
 }
 
 h2 {
@@ -133,7 +133,9 @@ nav ul li a, nav ul li a:visited {
 
 /* =Single 
 ------------------------------*/
-.single p {
+.single p,
+.single ul,
+.single ol {
     margin: 0 0 2em 0;
 }
 
@@ -142,6 +144,8 @@ nav ul li a, nav ul li a:visited {
 }
 .single-heading h1 {
     color: #C72800;
+    font-weight: 400;
+    margin-top: 0;
 }
 
 .single-heading p {
@@ -154,6 +158,10 @@ nav ul li a, nav ul li a:visited {
     width: 80%;
     height: 1px;
     background-color: #D8D8D8;
+    margin: .5em auto .5em 0;
+}
+
+.single-heading h1:after {
     margin: .5em auto;
 }
 
