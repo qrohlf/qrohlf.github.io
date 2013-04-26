@@ -1,5 +1,5 @@
-name: Quinn Rohlf
-description: Quinn Rohlf's blog
+name: QRohlf.com
+description: A blog about startups, technology, and other interesting things.
 url: http://qrohlf.com
 markdown: rdiscount
 pygments: true
