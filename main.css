@@ -40,13 +40,19 @@ pre {
     border-left: 1px solid #D8D8D8;
     max-width: 100%;
     overflow: auto;
-    font-size: .8em;
     background: none;
     background: rgba(211, 211, 211, 0.16);
     line-height: 1.7em;
 }
 
-p code {
+pre, code {
+    font-family: 'Droid Sans Mono', monospace;
+    font-size: .9em;
+}
+
+p code,
+ul code,
+li code {
     white-space: nowrap;
     border: 1px solid #eaeaea;
     background-color: #f8f8f8;
