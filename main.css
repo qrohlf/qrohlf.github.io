@@ -35,7 +35,7 @@ h2 {
 }
 
 pre {
-    margin: 0 0 2em 24px;
+    margin: 0 0 2em 2em;
     padding: 0 0 0 12px;
     border-left: 1px solid #D8D8D8;
     max-width: 100%;
@@ -136,7 +136,12 @@ nav ul li a, nav ul li a:visited {
 .single p,
 .single ul,
 .single ol {
-    margin: 0 0 2em 0;
+    margin-bottom: 2em;
+}
+
+.single ul,
+.single ol {
+    margin-left: 2em;
 }
 
 .single-heading {
