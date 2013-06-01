@@ -35,13 +35,14 @@ h2 {
 }
 
 pre {
-    margin: 0 0 2em 2em;
+    margin: 0 2em 2em 2em;
     padding: 0 0 0 12px;
-    border-left: 1px solid #D8D8D8;
+    border: 1px solid #D8D8D8;
+    border-left: 3px solid #D8D8D8;
+    border-radius: 3px;
     max-width: 100%;
     overflow: auto;
-    background: none;
-    background: rgba(211, 211, 211, 0.16);
+    background: #FFF;
     line-height: 1.7em;
 }
 
