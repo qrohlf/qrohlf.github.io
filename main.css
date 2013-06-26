@@ -35,7 +35,7 @@ h2 {
 }
 
 pre {
-    white-space: normal;
+    white-space: pre-wrap; 
     margin: 0 2em 2em 2em;
     padding: 0 0 0 12px;
     border: 1px solid #D8D8D8;
