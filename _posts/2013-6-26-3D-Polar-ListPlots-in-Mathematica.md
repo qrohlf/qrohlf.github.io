@@ -19,7 +19,7 @@ Gives you this:
 Here's what each part of the snippet does:
 
     ListPolarPlot3D[data_, opts___] := 
-Define a function called ListPoalrPlot3D that takes a variable number of arguments. Store the first argument in the `data` variable, and all the others in the `opts` variable. The triple-underscore means "zero or more arguments".
+Define a function called `ListPolarPlot3D` that takes a variable number of arguments. Store the first argument in the `data` variable, and all the others in the `opts` variable. The triple-underscore means "zero or more arguments".
 
     Module[{polarConvert}, 
 Create a local scope for the `polarConvert` function so that it doesn't interfere with anything in the global scope that might be called `polarConvert`.
