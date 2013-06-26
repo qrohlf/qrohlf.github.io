@@ -35,6 +35,7 @@ h2 {
 }
 
 pre {
+    white-space: normal;
     margin: 0 2em 2em 2em;
     padding: 0 0 0 12px;
     border: 1px solid #D8D8D8;
@@ -55,11 +56,20 @@ p code,
 ul code,
 li code {
     white-space: nowrap;
-    border: 1px solid #eaeaea;
-    background-color: #f8f8f8;
+    border: 1px solid #D8D8D8;
+    background-color: #FFF;
     border-radius: 3px;
     margin: 0 2px;
     padding: 0 5px;
+}
+
+.single img {
+    background-color: #FFF;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #D8D8D8;
+    border-radius: 3px;
 }
 
 /* =Layout 
