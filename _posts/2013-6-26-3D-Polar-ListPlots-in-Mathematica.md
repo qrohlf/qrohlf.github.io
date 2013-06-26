@@ -40,6 +40,6 @@ It's pretty easy to tweak the snippet to suit your needs. Here are a couple of e
     ListPolarPointPlot3D[data_, opts___] := Module[{polarConvert}, polarConvert[coords_] := {coords[[2]]*Cos[coords[[1]] Degree], coords[[2]]*Sin[coords[[1]] Degree], coords[[3]]}; ListPointPlot3D[Map[polarConvert, data], Evaluate[opts]]]
 
 # Limitations
-There are a few things to note when using this technique. First, *Mathematica* wants to automatically scale the axes by default. This can result in improperly displayed graphs if the scale for the `x` and `y` axes is different. I recommend setting your `xy` scale explicitly (i.e. `PlotRange -> \{\{-10, 10}, {-10, 10}, Automatic})`). 
+There are a few things to note when using this technique. First, *Mathematica* wants to automatically scale the axes by default. This can result in improperly displayed graphs if the scale for the `x` and `y` axes is different. I recommend setting your `xy` scale explicitly (i.e. {% raw %}`PlotRange -> {{-10, 10}, {-10, 10}, Automatic})`){% endraw %}. 
 
 Second, you're going to have Cartesian axes displayed. Short of really digging into *Mathematica*'s `Graphics3D` implementation, there's really no good way around this as the way that the whole technique works is by mapping the polar data into the Cartesian plane.
