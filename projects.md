@@ -5,6 +5,9 @@ description: Sometimes I get the chance to work on interesting projects and idea
 layout: page
 ---
 
+## [Lisst](http://qrohlf.com/Lisst/)
+A minimalist Sinatra application for creating and editing lists online.
+
 ## [Printerhack](https://play.google.com/store/apps/details?id=com.qrohlf.printerhack&hl=en)
 A small Android utility for changing the ready message on older printers.
 
