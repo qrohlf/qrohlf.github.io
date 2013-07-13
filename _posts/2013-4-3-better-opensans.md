@@ -4,8 +4,10 @@ layout: post
 summary: The @font-face kits I've seen for Open Sans all suck. So I built a better one.
 ---
 
-[Open Sans](http://en.wikipedia.org/wiki/Open_Sans) is a really great sans-serif font commissioned by Google and available under the Apache license. Lately, I've found myself using it for all kinds of projects on the web, including this site. While there are many kits available to use Open Sans with the industry-standard @font-face CSS webfont embedding, most webfont vendors and sites like [fontsquirrel](http://www.fontsquirrel.com/) use different font-family names to differentiate between regular, italic, and bold versions of the fonts. This means that you would have to re-declare the font-family every time you wanted italic or bold text, and just isn't a very robust solution. Plus, juggling 5-10 font-families makes it hard to keep your CSS simple and manageable. 
+*Disclaimer:
+This post is intended for people who have a specific reason to want to host the font themselves. For most web designers, [Google Web Fonts](http://www.google.com/fonts/) uses the same technique and lets you take advantage of browser caching and Google's CDN to speed up font loading. Unless you have a specific need for a downloadable webfont kit, I recommend giving Web Fonts a try.*
 
+[Open Sans](http://en.wikipedia.org/wiki/Open_Sans) is a really great sans-serif font commissioned by Google and available under the Apache license. Lately, I've found myself using it for all kinds of projects on the web, including this site. While there are many kits available to use Open Sans with the industry-standard @font-face CSS webfont embedding, most webfont vendors and sites like [fontsquirrel](http://www.fontsquirrel.com/) use different font-family names to differentiate between regular, italic, and bold versions of the fonts. This means that you would have to re-declare the font-family every time you wanted italic or bold text, and just isn't a very robust solution. Plus, juggling 5-10 font-families makes it hard to keep your CSS simple and manageable. 
 
 ## FontSquirrel Implementation:  
 {% highlight css %}
