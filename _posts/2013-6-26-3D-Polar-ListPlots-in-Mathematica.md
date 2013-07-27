@@ -13,7 +13,7 @@ After pasting that into your *Mathematica* notebook, you can easily generate 3D 
 
 Gives you this:
 
-<img src="/images/2013-6-26-3D-Polar-ListPlots-in-Mathematica/exampleplot.png" alt="Example Polar Plot" />
+<img src="/images/3D-Polar-ListPlots-in-Mathematica/exampleplot.png" alt="Example Polar Plot" />
 
 # Breakdown
 Here's what each part of the snippet does:
