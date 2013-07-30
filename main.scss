@@ -9,4 +9,17 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 html {
     font-size: 16px;
     line-height: 16px;
+    @include retina-image(/images/debut_light, 200px 200px);
+}
+
+header.primary {
+    h1 {
+        display: none;
+    }
+}
+
+nav {
+    h2 {
+        display: none;
+    }
 }
