@@ -3,14 +3,15 @@ layout: default
 description: A blog about web technolgies, Portland startups, and whatever else I'm inclined to write about
 ---
 <p class="intro">My name is Quinn Rohlf, and I build things with code. This is where I write about web technologies, Portland startups, and anything else that interests me.</p>
+<section class="post-index">
+    <h1>Post Index</h1>
 {% for post in site.posts %}
-    <article class="post">
-      <div class="post-content">
+    <article>
       	<h2><a href="{{post.url}}">{{ post.title }}</a></h2>
         <p>{{ post.summary }}</p>
-        <div class="post-meta">
+        <footer class="post-meta">
         	<p>{{ post.date | date: "%d %h %Y" }}</p>
-      	</div>
-      </div>
+      	</footer>
     </article>
 {% endfor %}
+</section>
