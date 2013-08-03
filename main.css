@@ -366,8 +366,8 @@ html {
 body {
   font-size: 1rem;
   line-height: 2rem;
-  width: -webkit-calc(700px + 2*4rem);
-  width: calc(700px + 2*4rem);
+  width: -webkit-calc(700px + (2 * 4rem));
+  width: calc(700px + (2 * 4rem));
   max-width: 100%;
   margin: 0 auto;
   padding: 0 4rem;
@@ -405,7 +405,7 @@ nav ul li {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-style: none;
+  font-style: normal;
   font-weight: 400;
   color: #000; }
 
