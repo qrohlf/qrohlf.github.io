@@ -1,0 +1,225 @@
+// html5 reset
+@import "mixins/html5reset-1.6.1";
+// code highlighting
+@import "mixins/pygments";
+// import baseline for designing 
+// @import "http://basehold.it/32/ff0000";
+// adjust grid offset from basehold.it
+body::after {
+    top: 20px;
+}
+
+// Color Scheme
+$accent-dark: #961E00;
+$accent-medium: #C72800;
+$accent-light: #FFF;
+
+$text-dark: #2d3a3f;
+$text-medium: #8c8c8c;
+ 
+$background-light: #fff; 
+
+// Global Styles & typographic elements
+* {
+    padding: 0;
+    margin:  0;
+    font-size: 1rem;
+    line-height: 2rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 1rem == 16px */
+html {
+    border-top: 8px solid $accent-dark;
+    padding: 2rem 0;
+    font-size: 16px;
+    background-image: url("/images/debut_light.png");
+    font-family: 'Open Sans', sans-serif;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
+      background-image: url("/images/debut_light@2x.png");
+      background-size: 200px 200px;
+  }
+}
+
+body {
+    font-size: 1rem;
+    line-height: 2rem;
+    width: -webkit-calc(700px + 2*4rem);
+    width: calc(700px + 2*4rem);
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 4rem;
+    color: $text-dark;
+    @media only screen and (max-width: 600px) {
+        padding: 0 1.5rem;
+    }
+}
+
+a, a:visited {
+    color: #000;
+    text-decoration: underline;
+}
+
+p {
+    line-height: 2rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+// Header, footer, and page structure
+header.primary {
+    text-align: center;
+    margin-bottom: 2rem;
+    h1 {
+        display: none;
+    }
+}
+
+footer.primary {
+    text-align: center;
+    margin-top: 3rem;
+    color: $text-medium;
+}
+
+nav {
+    h2 { 
+        display: none;
+    }
+
+    ul li {
+        display: inline-block;
+        margin: 0 3px 0 3px;
+    }
+}
+
+/* Default header styles */
+h1, h2, h3, h4, h5, h6 {
+    font-style: none;
+    font-weight: 400;
+    color: #000;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+article footer {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: $text-medium;
+    text-align: right;
+}
+
+p.intro {
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: $text-medium;
+    margin-bottom: 2rem;
+}
+
+// Style the homepage post index
+.post-index {
+    h1 {
+        display: none;
+    }
+    article {
+        box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 1px;
+        background-color: $background-light;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 0.25rem;
+        padding: 1rem 1rem;
+        margin: -webkit-calc(2rem - 2px) 0;
+        margin: calc(2rem - 2px) 0;
+        h2 a {
+            font-size: 1.15rem; 
+            line-height: 1.5rem;
+            color: $accent-medium;
+        }
+    }
+}
+
+// Style posts, pages
+.single {
+    h1 {
+        font-weight: 300;
+        font-size: 2rem; 
+    }
+    header {
+        text-align: center;
+        h1 {color: #C72800; line-height: 2.5rem;}
+        h1:after {margin: 0.5rem auto;}
+        p {margin: 0 0 1rem 0;}  
+        margin-bottom: 0.5rem;
+    }
+    h1:after {
+        content: " ";
+        display: block;
+        width: 80%;
+        height: 1px;
+        background-color: #D8D8D8;
+        margin: 0.5em 0;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+    img {
+        background-color: #FFF;
+        padding: 10px;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #D8D8D8;
+        border-radius: 3px;
+        max-width: 100%;
+        height: auto; 
+    }
+}
+
+.single:after {
+    content: " ";
+    display: block;
+    width: 80%;
+    height: 1px;
+    background-color: #D8D8D8;
+    margin: 4em auto 1em auto;
+}
+
+// Code styling
+pre {
+    white-space: pre-wrap; 
+    margin: 0 2rem 2rem 2rem;
+    padding: 0 0 0 12px;
+    border: 1px solid #D8D8D8;
+    border-left: 3px solid #D8D8D8;
+    border-radius: 3px;
+    max-width: 100%;
+    overflow: auto;
+    background: #FFF;
+    line-height: 1.7em; 
+}
+
+pre, code {
+    font-family: 'Droid Sans Mono', monospace;
+    font-size: 0.9rem;
+}
+
+p code,
+ul code,
+li code {
+    white-space: pre-wrap;
+    border: 1px solid #D8D8D8;
+    background-color: #FFF;
+    border-radius: 3px;
+    margin: 0 2px;
+    padding: 0 5px;
+}

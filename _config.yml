@@ -4,5 +4,6 @@ url: http://qrohlf.com
 markdown: rdiscount
 pygments: true
 permalink: /posts/:title
+exclude: [bourbon, neat, main.scss, README.md, Gemfile, Gemfile.lock]
 rdiscount:
   extensions: [smart]

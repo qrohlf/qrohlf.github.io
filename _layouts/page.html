@@ -1,13 +1,15 @@
 {% include header.html %}
-<div class="single">
-	<div class="single-heading">
+<article class="single">
+	<header>
 	  {% if page.title %}
 	  	<h1>{{page.title}}</h1>
 	  {% endif %}
 	  {% if page.summary %}
 	  <p class="intro">{{page.summary}}</p>
 	  {% endif %}
-	</div>
-  {{ content }}
-</div>
+	</header>
+    <section>
+        {{ content }}
+    </section>
+</article>
 {% include footer.html %}
