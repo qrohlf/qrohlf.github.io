@@ -47,8 +47,8 @@ html {
 body {
     font-size: 1rem;
     line-height: 2rem;
-    width: -webkit-calc(700px + (2 * 4rem));
-    width: calc(700px + (2 * 4rem));
+    width: -webkit-calc(700px + 2 * 4rem);
+    width: calc(700px + 2 * 4rem);
     max-width: 100%;
     margin: 0 auto;
     padding: 0 4rem;
@@ -140,6 +140,7 @@ p.intro {
             font-size: 1.15rem; 
             line-height: 1.5rem;
             color: $accent-medium;
+            text-decoration: none;
         }
     }
 }
