@@ -1,10 +1,10 @@
 ---
 title: Ruby Whitespace Shenanigans, Hello World Edition
 layout: post
-summary: A (somewhat silly) post about using unicode whitespace in ruby
+summary: A (somewhat silly) post about using Unicode whitespace in ruby
 ---
 
-I recently enountered [this article](http://www.rubyinside.com/the-split-is-not-enough-whitespace-shenigans-for-rubyists-5980.html) online, which highlights an interesting side effect of how ruby supports unicode special characters. Ruby treats the unicode nonbreaking space (U+00A0) like any other unicode special character, meaning it can be used for variable and method names. The article illustrates this with the following code snippet:
+I recently encountered [this article](http://www.rubyinside.com/the-split-is-not-enough-whitespace-shenigans-for-rubyists-5980.html) online, which highlights an interesting side effect of how ruby supports Unicode special characters. Ruby treats the Unicode non-breaking space (U+00A0) like any other Unicode special character, meaning it can be used for variable and method names. The article illustrates this with the following code snippet:
 
     def  (  )
           *2
@@ -45,9 +45,11 @@ I decided to take the insanity a bit further and write 'Hello World' using U+00A
 
 That code snippet will output `Hello World` if you save it with utf-8 encoding and run it.
 
-(Since your web browser may or may not want to let you copy and paste this into a text editor with the unicode intact, I suggest downloading a copy from [this gist](https://gist.github.com/qrohlf/7045823) if you'd like to try running it for yourself).
+(Since your web browser may or may not want to let you copy and paste this into a text editor with the Unicode intact, I suggest downloading a copy from [this gist](https://gist.github.com/qrohlf/7045823) if you'd like to try running it for yourself).
 
 This isn't anything ground-breaking. You can see a non-whitespace version of the program [here](https://gist.github.com/qrohlf/7046060). I define a variable `one` as the integer literal `1`, then define `two`, `five`, and `ten` using `one`. The program then creates an array of the ASCII integer values representing the characters of "Hello World", expressed mathematically using the variables `one`, `two`, `five`, and `ten`. It uses variable definitions inside the array definition to shorten the process. The final line casts the integer ASCII values of the 'hw' array to ASCII characters, then joins them into a string and prints the string to Stdout.
+
+This is, of course, a very quick-and-dirty proof of concept. I'm sure you could optimize this further with some math to find the greatest common divisors of all the decimal representations of the characters of "Hello World" and reduce the number of arithmetic operators needed to create the array. For now, I'm satisfied to leave it as-is, but if you have a better implementation I'd love to see it. My contact info is in the footer.
 
 But Wait - There's More!
 ========================
