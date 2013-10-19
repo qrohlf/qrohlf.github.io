@@ -474,6 +474,15 @@ p.intro {
   border-radius: 3px;
   max-width: 100%;
   height: auto; }
+.single blockquote {
+  margin-left: 2rem;
+  font-size: 1.5rem; }
+  .single blockquote:before {
+    content: "“";
+    float: left;
+    font-size: 4rem;
+    padding-top: 1rem;
+    margin-right: 0.5rem; }
 
 .single:after {
   content: " ";
