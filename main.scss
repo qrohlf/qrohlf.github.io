@@ -184,6 +184,18 @@ p.intro {
         max-width: 100%;
         height: auto; 
     }
+
+    blockquote {
+        margin-left: 2rem;
+        font-size: 1.5rem;
+        &:before {
+            content: "“";
+            float: left;
+            font-size: 4rem;
+            padding-top: 1rem;
+            margin-right: 0.5rem;
+        }
+    }
 }
 
 .single:after {
