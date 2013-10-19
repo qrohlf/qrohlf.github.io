@@ -463,7 +463,7 @@ p.intro {
   margin: 0.5em 0; }
 .single h2 {
   font-size: 1.25em; }
-.single p {
+.single p, .single ul, .single ol {
   margin-bottom: 2rem; }
 .single img {
   background-color: #FFF;
