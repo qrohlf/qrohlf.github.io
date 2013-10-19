@@ -22,7 +22,7 @@ The author of the above post ends it with a dire warning:
 However, I believe that there is a time and a place for shenanigans, and that it is here and now.
 <img src="/images/ruby-whitespace-shenanigans/shenanigans.gif" alt="shenanigans" />
 
-I decided to take the <s>shenanigans</s> insanity a bit further and write 'Hello World' using U+00A0 and int-to-char casting: 
+I decided to take the insanity a bit further and write 'Hello World' using U+00A0 and int-to-char casting: 
 
           = 1
           =  + 
