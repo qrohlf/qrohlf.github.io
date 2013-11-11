@@ -12,4 +12,4 @@ A minimalist Sinatra application for creating and editing lists online.
 A small Android utility for changing the ready message on older printers.
 
 ## [ExcellentResume](https://github.com/qrohlf/excellentresume)
-An XML-driven resume web app, good for people who wear multiple hats. I'm currently in the process of rewriting the backend to use Rails rather than PHP.
+An XML-driven resume web app I wrote while experimenting with ways to solve the problem of applying to jobs in 4 different fields. Probably fairly out of date.
