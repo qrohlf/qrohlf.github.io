@@ -1,3 +1,4 @@
+@charset "UTF-8";
 // html5 reset
 @import "mixins/html5reset-1.6.1";
 // code highlighting
@@ -59,7 +60,7 @@ body {
 }
 
 a, a:visited {
-    color: #000;
+    color: $text-dark;
     text-decoration: underline;
 }
 
