@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* 
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -377,7 +378,7 @@ body {
       padding: 0 1.5rem; } }
 
 a, a:visited {
-  color: #000;
+  color: #2d3a3f;
   text-decoration: underline; }
 
 p {
