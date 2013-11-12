@@ -5,6 +5,9 @@ description: Sometimes I get the chance to work on interesting projects and idea
 layout: page
 ---
 
+## [Quinn Outdoors](http://outdoors.qrohlf.com)
+An adventure/travel blog that I update fairly regularly. It's mostly trip reports right now.
+
 ## [Lisst](http://qrohlf.com/Lisst/)
 A minimalist Sinatra application for creating and editing lists online.
 
