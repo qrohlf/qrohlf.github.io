@@ -4,7 +4,7 @@ summary: A feature-rich and visually appealing site for the University of Southe
 layout: page
 classes: portfolio
 ---
-<img src="/images/portfolio/scoutfitters/scoutfitters-large.png"/>
-<img src="/images/portfolio/scoutfitters/scoutfitters-guides.png"/>
+<img src="/images/portfolio/scoutfitters/scoutfitters-large.png" alt="SC Outfitters Screenshot"/>
+<img src="/images/portfolio/scoutfitters/scoutfitters-guides.png" alt="SC Outfitters Detail View"/>
 
 See it live at [scoutfitters.org](http://scoutfitters.org/)
