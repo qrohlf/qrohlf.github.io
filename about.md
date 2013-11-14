@@ -3,12 +3,20 @@ title: About
 layout: page
 description: My name is Quinn Rohlf, and I am a mobile applications developer, web designer, and student. I like to build interesting things and solve hard problems.
 summary: My name is Quinn Rohlf, and I build neat things as a full-stack web developer in Portland, Oregon.
+style: |
+    img.nobackground {
+        background: transparent;
+        border: none;
+    }
+    .about-gallery div {
+        text-align: center;
+    }
 ---
-## Hats that I wear
-I've worked as a mobile applications & web developer, database guy, and freelance web designer. Currently, I'm working on a Kickstarter campaign for a tablet accessory that I designed. I'm also three years into a computer science degree at Lewis & Clark College. 
+# Hello!
+I am a software developer, web designer, and student. I like to build interesting things and solve hard problems. When I'm not doing schoolwork, I freelance as a web developer, work on a couple of [interesting](https://github.com/qrohlf/headlamp-dispatches) [side](https://github.com/qrohlf/Lisst) [projects](https://github.com/qrohlf/rockthang), and write on this blog. I have a background in full-stack web development and spend a lot of time playing with design ideas and new ways to present content. I believe that simple and thoughtful design can make the world a better place, and I try to apply that philosophy to every aspect of the things that I create.
 
-## Hire me!
-I'm currently available for new freelance projects - get in touch at [qr@qrohlf.com](mailto:qr@qrohlf.com)
+# Have a Project?
+I'm currently accepting new clients. Please don't hesitate to take a look at my [portfolio](/projects), glance over my [resume](http://resume.qrohlf.com), or get in touch. if you're local, I'd love to discuss your project over coffee. Just shoot me an [email](mailto:qr@qrohlf.com).
 
-## Want to get in touch?
-You can send a tweet to [@qrohlf](https://twitter.com/qrohlf) on twitter, or send an email to [qr@qrohlf.com](mailto:qr@qrohlf.com). If you're into retro stuff, my phone number is [503 427 8466](tel:+15034278466).
+# Get In Touch
+You can follow me at [@qrohlf](https://twitter.com/qrohlf) on twitter, or send an email to [qr@qrohlf.com](mailto:qr@qrohlf.com). 
