@@ -36,13 +36,8 @@ html {
     border-top: 8px solid $accent-dark;
     padding: 2rem 0;
     font-size: 16px;
-    background-image: url("/images/debut_light.png");
     font-family: 'Open Sans', sans-serif;
-
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-      background-image: url("/images/debut_light@2x.png");
-      background-size: 200px 200px;
-  }
+    background-color: #FCFCFD;
 }
 
 body {
