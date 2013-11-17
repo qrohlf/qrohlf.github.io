@@ -20,7 +20,7 @@ The author of the above post ends it with a dire warning:
 > Please don't use this in production code or the Ruby gods will come and haunt you in your sleep. 
 
 However, I believe that there is a time and a place for shenanigans, and that it is here and now.
-<img src="/images/ruby-whitespace-shenanigans/shenanigans.gif" alt="shenanigans" />
+<img src="/images/ruby-whitespace-shenanigans/shenanigans.gif" alt="shenanigans"  class="bordered" />
 
 I decided to take the insanity a bit further and write 'Hello World' using U+00A0 and int-to-char casting: 
 
