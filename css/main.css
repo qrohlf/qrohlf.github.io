@@ -427,7 +427,7 @@ p.intro {
 .post-index article {
   box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 1px;
   background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
   padding: 1rem 1rem;
   margin: -webkit-calc(2rem - 2px) 0;
