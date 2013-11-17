@@ -463,14 +463,15 @@ p.intro {
 .single p, .single ul, .single ol {
   margin-bottom: 2rem; }
 .single img {
-  background-color: #FFF;
   padding: 10px;
   display: block;
   margin: 0 auto;
-  border: 1px solid #D8D8D8;
-  border-radius: 3px;
   max-width: 100%;
   height: auto; }
+  .single img.bordered {
+    border: 1px solid #D8D8D8;
+    border-radius: 3px;
+    background-color: #FFF; }
 .single blockquote {
   margin-left: 2rem;
   font-size: 1.5rem; }
