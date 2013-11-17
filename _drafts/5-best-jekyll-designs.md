@@ -1,5 +1,5 @@
 ---
-title: 5 examples of great minimal Jekyll blog designs
+title: 5 Examples of Great Minimal Jekyll Blog Designs
 summary: Inspiration and ideas from a few of my favorite hacker blogs
 layout: post
 ---
@@ -12,7 +12,7 @@ A lot has been said already about the merits of Jekyll as a minimalist publishin
 
 <img src="/images/5-best-jekyll-designs/warpspire.png" alt="warpspire screenshot" />
 
-[Warpspire](http://warpspire.com) is a great example of how a well-chosen and contrasting color palette combined with good vertical rythm and typography can make a design pop without images or bright colors. Kyle Neath also has some great posts on design, making Warpspire a great place to get inspiration of all kinds.
+[Warpspire](http://warpspire.com) is a great example of how a well-chosen and contrasting color palette combined with good vertical rhythm and typography can make a design pop without images or bright colors. Kyle Neath also has some great posts on design, making Warpspire a great place to get inspiration of all kinds.
 
 # 2. Sparanoid, by [@tunghsiao](https://twitter.com/tunghsiao)
 
@@ -24,12 +24,20 @@ A lot has been said already about the merits of Jekyll as a minimalist publishin
 
 <img src="/images/5-best-jekyll-designs/holman.png" alt="holman screenshot" />
 
+Zach Holman's [website](http://zachholman.com/) has a really nice layout that makes the most of large images in the header while still letting the content shine. Zach is another GitHubber, and if you haven't seen any of his talks before you should go check [that section](http://zachholman.com/talks) of his site out. Not only are his talks interesting and informative, but his slides are great design examples in and of themselves
+
 # 4. Alex Cican, by [@alexcican](https://twitter.com/alexcican)
 
 <img src="/images/5-best-jekyll-designs/cican.png" alt="cican screenshot" />
+
+Alex Cican's [portfolio](http://alexcican.com/) is a little bit rough around the edges in places, but it makes up for it with great use of images and a creative navigation system that mimics a restaurant menu (click the button in the upper right hand corner). It's a good example of how clean design can still convey a lot of personality.
 
 # 5. Minimal Mistakes Theme, by [@mmistakes](https://twitter.com/mmistakes)
 
 <img src="/images/5-best-jekyll-designs/mmistakes.png" alt="minimal mistakes screenshot" />
 
-[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes/) is an open source Jekyll theme released by Michael Rose. 
+[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes/) is actually an open source Jekyll theme released by Michael Rose. It's similar in some ways to Zach Holman's site, but the thing that I like about it is how it includes a business card-like section of contact information and a photo next to every page on the site. Not only does the extra column help balance the content on the right, but it also adds a call-to-action to each page - if you like the author's work, a way to contact them is only a click away. 
+
+-------
+
+Jekyll is a great blogging platform because of its minimalism - it's simple enough to be convenient to use as well as not get in the way when you're trying to use it slightly differently than it was intended. These 5 examples show how simple software paired with stripped-down design can accomplish great things. 
