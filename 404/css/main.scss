@@ -1,0 +1,69 @@
+@charset "UTF-8";
+// html5 reset
+@import "mixins/html5reset-1.6.1";
+@import "mixins/icomoon";
+
+//Color Scheme
+$pink: #f06060;
+$white: #FFF;
+
+* {box-sizing: border-box;} //booyah
+
+html {
+    background-color: $pink;
+    color: $white;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    @media screen and (max-width: 600px) {
+        font-size: 10px;
+    }
+}
+
+#container {
+    width: calc(100% - 100px);
+    max-width: 700px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+h1 {
+    font-size: 16rem;
+}
+
+h2 {
+    font-size: 6rem;
+    color: mix($pink, $white, 70%);
+}
+
+footer {
+    margin-top: 4rem;
+    color: $white;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    display: inline-block;
+    line-height: 3rem;
+    vertical-align: middle;
+    list-style: none;
+    font-size: 2rem;
+    &:before {
+        content: "{";
+        font-size: 3rem;
+    }
+    &:after {
+        content: "}";
+        font-size: 3rem;
+    }
+}
+
+
+li {
+    display: inline-block;
+    margin: 0 .25rem;
+}
