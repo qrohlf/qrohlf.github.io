@@ -11,170 +11,131 @@ body::after {
 }
 
 // Color Scheme
-$accent-dark: #961E00;
-$accent-medium: #C72800;
-$accent-light: #FFF;
+$pink: #f06060;
+$turquoise: #09656C;
+$gray: #3E4651;
+$white: #FFF;
 
-$text-dark: #2d3a3f;
-$text-medium: #8c8c8c;
- 
-$background-light: #fff; 
+// Controls
+$bg: $turquoise;
 
-// Global Styles & typographic elements
-* {
-    padding: 0;
-    margin:  0;
-    font-size: 1rem;
-    line-height: 2rem; 
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
+// Global options
+* { box-sizing: border-box; }               // use a smarter box model
+html, body { 
+    font-size: 16px;                        // 1rem == 16px
+    font-family: 'Open Sans', sans-serif;   // default to Open Sans for fonts
+    color: $gray;                           // default to gray for fonts
+    line-height: 2;                         // double-space by default
+    background: mix($gray, $white, 1%);
+}   
 
-/* 1rem == 16px */
-html {
-    border-top: 8px solid $accent-dark;
-    padding: 2rem 0;
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f9f9f9;
-    background-image: url("/images/bg.png");
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-      background-image: url("/images/bg@2x.png");
-      background-size: 376px 356px;
-    }
-}
-
-body {
-    font-size: 1rem;
-    line-height: 2rem;
-    width: -webkit-calc(700px + 2 * 4rem);
-    width: calc(700px + 2 * 4rem);
-    max-width: 100%;
+container, .container {
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 4rem;
-    color: $text-dark;
-    @media only screen and (max-width: 600px) {
-        padding: 0 1.5rem;
+    padding: 4rem 50px;
+}
+
+// header styles
+body > header {
+    background: $bg;
+    color: $white;
+    img {
+        float: left;
+        background: $white;
+        margin-right: 2rem;
+        border-radius: 100%;
+        border: 5px solid $white;
+        margin-top: 4rem;
+        margin-bottom: 3rem;
     }
-}
-
-a, a:visited {
-    color: $text-dark;
-    text-decoration: underline;
-}
-
-p {
-    line-height: 2rem;
-}
-
-img {
-    max-width: 100%;
-}
-
-// Header, footer, and page structure
-header.primary {
-    text-align: center;
-    margin-bottom: 2rem;
     h1 {
-        display: none;
+        font-size: 6rem;
     }
-}
-
-footer.primary {
-    text-align: center;
-    margin-top: 3rem;
-    color: $text-medium;
-}
-
-nav {
-    h2 { 
-        display: none;
-    }
-
-    ul li {
-        display: inline-block;
-        margin: 0 3px 0 3px;
-    }
-}
-
-/* Default header styles */
-h1, h2, h3, h4, h5, h6 {
-    font-style: normal;
-    font-weight: 400;
-    color: #000;
-}
-
-h1 a {
-    text-decoration: none;
-}
-
-article footer {
-    font-size: 0.85rem;
-    font-style: italic;
-    color: $text-medium;
-    text-align: right;
-}
-
-p.intro {
-    font-weight: 300;
-    font-size: 1.5rem;
-    line-height: 2rem;
-    color: $text-medium;
-    margin-bottom: 2rem;
-}
-
-// Style the homepage post index
-.post-index {
-    h1 {
-        display: none;
-    }
-    article {
-        box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 1px;
-        background-color: $background-light;
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        border-radius: 0.25rem;
-        padding: 1rem 1rem;
-        margin: -webkit-calc(2rem - 2px) 0;
-        margin: calc(2rem - 2px) 0;
-        h2 a {
-            font-size: 1.15rem; 
-            line-height: 1.5rem;
-            color: $accent-medium;
-            text-decoration: none;
+    h2 {
+        font-size: 3rem;
+        color: mix($bg, $gray, 50%);
+        & em {
+            color: mix($bg, $white, 50%);
+            font-style: normal;
         }
     }
 }
 
-// Style posts, pages
-.single {
+body > footer {
+    text-align: center;
+    .container {padding-top: 0.5rem;}
+    color: mix($gray, $white, 60%);
+    &:before {
+        content: "•••••";
+        display: block;
+    }
+}
+
+// nav styles
+nav {
+    // text-align: center;
+    background: mix($gray, $white, 20%);
+    color: mix($gray, $white, 60%);
+    text-transform: lowercase;
+    .container {padding-top: 1rem; padding-bottom: 1rem};
+}
+
+// index styles 
+#index {
+    article {
+        margin-bottom: 2rem;
+    }
+    p {
+        color: mix($gray, $white, 80%);
+    }
+    header {
+        font-size: 0.85rem;
+        color: mix($gray, $white, 60%);
+    }
+}
+
+// global typography
+a, a:visited {
+    color: inherit;     // don't clobber text colors with link colors
+    // text-decoration: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.15;
+    & a {
+        text-decoration: none;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+#single {
+
     h1 {
         font-weight: 300;
         font-size: 2rem; 
-    }
-    header {
-        text-align: center;
-        h1 {color: #C72800; line-height: 2.5rem;}
-        h1:after {margin: 0.5rem auto;}
-        p {margin: 0 0 1rem 0;}  
         margin-bottom: 0.5rem;
-    }
-    h1:after {
-        content: " ";
-        display: block;
-        width: 80%;
-        height: 1px;
-        background-color: #D8D8D8;
-        margin: 0.5em 0;
     }
 
     h2 {
-        font-size: 1.25em;
+        font-weight: 300;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    footer {
+        text-align: right;
+        margin-top: 3rem;
+        font-style: italic;
+        color: mix($gray, $white, 60%);
     }
 
     p, ul, ol {
         margin-bottom: 2rem;
     }
+
     img {
         padding: 10px;
         display: block;
@@ -182,7 +143,7 @@ p.intro {
         max-width: 100%;
         height: auto; 
         &.bordered {
-            border: 1px solid #D8D8D8;
+            border: 1px solid $gray;
             border-radius: 3px;
             background-color: #FFF;
         }
@@ -191,97 +152,43 @@ p.intro {
     blockquote {
         margin-left: 2rem;
         font-size: 1.5rem;
+        line-height: 1.15;
         &:before {
             content: "“";
             float: left;
             font-size: 4rem;
-            padding-top: 1rem;
             margin-right: 0.5rem;
+            margin-top: -0.5rem;
         }
     }
-}
 
-.single:after {
-    content: " ";
-    display: block;
-    width: 80%;
-    height: 1px;
-    background-color: #D8D8D8;
-    margin: 4em auto 1em auto;
-}
-
-// Code styling
-pre {
-    white-space: pre-wrap; 
-    margin: 0 2rem 2rem 2rem;
-    padding: 0 0 0 12px;
-    border: 1px solid #D8D8D8;
-    border-left: 3px solid #D8D8D8;
-    border-radius: 3px;
-    max-width: 100%;
-    overflow: auto;
-    background: #FFF;
-    line-height: 1.7em; 
-}
-
-pre, code {
-    font-family: 'Droid Sans Mono', monospace;
-    font-size: 0.9rem;
-}
-
-p code,
-ul code,
-li code {
-    white-space: pre-wrap;
-    border: 1px solid #D8D8D8;
-    background-color: #FFF;
-    border-radius: 3px;
-    margin: 0 2px;
-    padding: 0 5px;
-}
-
-//Portfolio Stuff
-.portfolio-list {
-    img {
-        @extend .nobackground;
-        width: 45%;
-        float: left;
-        margin-right: 20px;
+    // Code styling
+    pre {
+        white-space: pre-wrap; 
+        margin: 0 2rem 2rem 2rem;
+        padding: 0 0 0 12px;
+        border: 1px solid $gray;
+        border-left: 3px solid $gray;
+        border-radius: 3px;
+        max-width: 100%;
+        overflow: auto;
+        background: #FFF;
+        line-height: 1.7em; 
     }
-    .about-gallery div {
-        text-align: center;
-    }
-    article:after {
-        content: "";
-        display: block;
-        clear: both;
-    }
-    article {
-        margin-bottom: 3rem;
-    }
-    @media screen and (max-width: 550px) {
-        img {
-            width: 100%;
-            display: block;
-            margin-bottom: 1rem;
-        }
-        h2 {
-            text-align: center;
-        }
-    }
-}
 
-.single.portfolio {
-    img {
-        @extend .nobackground;
+    pre, code {
+        font-family: 'Droid Sans Mono', monospace;
+        font-size: 0.9rem;
     }
-}
 
-
-
-//Utility Classes
-.nobackground {
-    background-color: transparent;
-    background-image: none;
-    border: none;
+    p code,
+    ul code,
+    li code {
+        white-space: pre-wrap;
+        border: 1px solid mix($gray, $white, 80%);
+        background-color: $white;
+        border-radius: 3px;
+        margin: 0 2px;
+        padding: 0 5px;
+    }
 }

@@ -2,16 +2,24 @@
 layout: default
 description: A blog about web technolgies, Portland startups, and whatever else I'm inclined to write about
 ---
-<p class="intro">My name is Quinn Rohlf, and I build things with code. This is where I write about web technologies, Portland startups, and anything else that interests me.</p>
-<section class="post-index">
-    <h1>Post Index</h1>
-{% for post in site.posts %}
-    <article>
-      	<h2><a href="{{post.url}}">{{ post.title }}</a></h2>
-        <p>{{ post.summary }}</p>
-        <footer class="post-meta">
-        	<p>{{ post.date | date: "%d %h %Y" }}</p>
-      	</footer>
-    </article>
-{% endfor %}
+<header>
+    <div class="container">
+    <img src="/images/me.jpg" height="150" width="150" alt="Profile Picture" />
+    <h1>Hello!</h1>
+    <h2>My name is <em>Quinn Rohlf</em>, and I build neat things</h2>
+    </div>
+</header>
+{% include nav.html %}
+<section id="index">
+    <div class="container">
+        {% for post in site.posts %}
+        <article>
+            <header>
+                {{ post.date | date: "%d %h %Y" }}
+            </header>
+          	<h2><a href="{{post.url}}">{{ post.title }}</a></h2>
+            <p>{{ post.summary }}</p>
+        </article>
+        {% endfor %}
+    </div>
 </section>
