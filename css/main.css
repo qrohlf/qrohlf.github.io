@@ -238,10 +238,13 @@ img { max-width: 100%; }
 header.primary { text-align: center; margin-bottom: 2rem; }
 header.primary h1 { display: none; }
 
+body > p.intro { margin-bottom: 3rem; }
+
 footer.primary { text-align: center; margin-top: 3rem; color: #758191; }
 
 nav h2 { display: none; }
 nav ul li { display: inline-block; margin: 0 3px 0 3px; }
+nav a, nav a:visited { color: #758191; }
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 { font-style: normal; font-weight: 400; color: #000; }
