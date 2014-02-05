@@ -16,9 +16,11 @@ $accent-medium: #C72800;
 $accent-light: #FFF;
 
 $text-dark: #2d3a3f;
-$text-medium: #8c8c8c;
+$text-medium: #758191;
  
 $background-light: #fff; 
+
+$background: #E1F2F3;
 
 // Global Styles & typographic elements
 * {
@@ -37,12 +39,7 @@ html {
     padding: 2rem 0;
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
-    background-color: darken(#f9f9f9, 5%);
-    // background-image: url("/images/bg.png");
-    // @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {
-    //   background-image: url("/images/bg@2x.png");
-    //   background-size: 376px 356px;
-    // }
+    background-color: $background;
 }
 
 body {
@@ -66,6 +63,17 @@ a, a:visited {
 
 p {
     line-height: 2rem;
+}
+
+hr {
+    text-align: center;
+    height: 0;
+    border: none;
+    color: lighten($text-dark, 40%);
+    &:before {
+        content: "•••";
+        display: block;
+    }
 }
 
 img {
@@ -130,7 +138,7 @@ p.intro {
         display: none;
     }
     article {
-        box-shadow: rgba(0, 0, 0, 0.05) 3px 3px 1px;
+        box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 1px;
         background-color: $background-light;
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 0.25rem;
@@ -157,14 +165,14 @@ p.intro {
         h1 {color: #C72800; line-height: 2.5rem;}
         h1:after {margin: 0.5rem auto;}
         p {margin: 0 0 1rem 0;}  
-        margin-bottom: 0.5rem;
+        margin-bottom: 2rem;
     }
     h1:after {
         content: " ";
         display: block;
         width: 80%;
         height: 1px;
-        background-color: #D8D8D8;
+        background-color: $text-medium;
         margin: 0.5em 0;
     }
 
@@ -172,7 +180,7 @@ p.intro {
         font-size: 1.25em;
     }
 
-    p, ul, ol {
+    p, ul, ol, hr {
         margin-bottom: 2rem;
     }
     img {
@@ -182,7 +190,7 @@ p.intro {
         max-width: 100%;
         height: auto; 
         &.bordered {
-            border: 1px solid #D8D8D8;
+            border: 1px solid $text-medium;
             border-radius: 3px;
             background-color: #FFF;
         }
@@ -206,7 +214,7 @@ p.intro {
     display: block;
     width: 80%;
     height: 1px;
-    background-color: #D8D8D8;
+    background-color: $text-medium;
     margin: 4em auto 1em auto;
 }
 
@@ -215,12 +223,12 @@ pre {
     white-space: pre-wrap; 
     margin: 0 2rem 2rem 2rem;
     padding: 0 0 0 12px;
-    border: 1px solid #D8D8D8;
-    border-left: 3px solid #D8D8D8;
+    border: 1px solid $text-medium;
+    border-left: 3px solid $text-medium;
     border-radius: 3px;
     max-width: 100%;
     overflow: auto;
-    background: #FFF;
+    background: mix($background, #FFF, 20%);
     line-height: 1.7em; 
 }
 
@@ -233,8 +241,8 @@ p code,
 ul code,
 li code {
     white-space: pre-wrap;
-    border: 1px solid #D8D8D8;
-    background-color: #FFF;
+    border: 1px solid $text-medium;
+    background: mix($background, #FFF, 20%);
     border-radius: 3px;
     margin: 0 2px;
     padding: 0 5px;
