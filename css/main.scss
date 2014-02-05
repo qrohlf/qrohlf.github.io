@@ -89,6 +89,10 @@ header.primary {
     }
 }
 
+body > p.intro {
+    margin-bottom: 3rem;
+}
+
 footer.primary {
     text-align: center;
     margin-top: 3rem;
@@ -103,6 +107,9 @@ nav {
     ul li {
         display: inline-block;
         margin: 0 3px 0 3px;
+    }
+    a, a:visited {
+        color: $text-medium;
     }
 }
 
