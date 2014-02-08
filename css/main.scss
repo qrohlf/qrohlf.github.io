@@ -204,7 +204,7 @@ p.intro {
     }
 
     blockquote {
-        margin-left: 2rem;
+        p {margin-left: 2rem;}
         font-size: 1.5rem;
         &:before {
             content: "“";
