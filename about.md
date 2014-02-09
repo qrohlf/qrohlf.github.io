@@ -1,16 +1,7 @@
 ---
 title: About
 layout: page
-description: My name is Quinn Rohlf, and I am a mobile applications developer, web designer, and student. I like to build interesting things and solve hard problems.
-summary: My name is Quinn Rohlf, and I build neat things as a full-stack web developer in Portland, Oregon.
-style: |
-    img.nobackground {
-        background: transparent;
-        border: none;
-    }
-    .about-gallery div {
-        text-align: center;
-    }
+summary: My name is Quinn Rohlf, and I build neat things as a web developer and student in Portland, Oregon.
 ---
 # Hello!
 I am a software developer, web designer, and student. I like to build interesting things and solve hard problems. I freelance as a web developer, work on a couple of  [interesting](http://sidekick.qrohlf.com) [side](https://github.com/qrohlf/Lisst) [projects](https://github.com/qrohlf/rockthang), and write on this blog. I have a background in full-stack web development and spend a lot of time playing with design ideas and new ways to present content. I believe that simple and thoughtful design can make the world a better place.
