@@ -221,7 +221,7 @@ body::after { top: 20px; }
 * { padding: 0; margin: 0; font-size: 1rem; line-height: 2rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 /* 1rem == 16px */
-html { border-top: 8px solid #961e00; padding: 2rem 0; font-size: 16px; font-family: 'Open Sans', sans-serif; background-color: #e1f2f3; }
+html { border-top: 8px solid #961e00; padding: 2rem 0; font-size: 16px; font-family: 'Open Sans', sans-serif; background-color: #e1f2ff; }
 
 body { font-size: 1rem; line-height: 2rem; width: -webkit-calc(700px + 2 * 4rem); width: calc(700px + 2 * 4rem); max-width: 100%; margin: 0 auto; padding: 0 4rem; color: #2d3a3f; }
 @media only screen and (max-width: 600px) { body { padding: 0 1.5rem; } }
@@ -275,11 +275,11 @@ p.intro { font-weight: 300; font-size: 1.5rem; line-height: 2rem; color: #758191
 
 .single:after { content: " "; display: block; width: 80%; height: 1px; background-color: #758191; margin: 4em auto 1em auto; }
 
-pre { white-space: pre-wrap; margin: 0 2rem 2rem 2rem; padding: 0 0 0 12px; border: 1px solid #758191; border-left: 3px solid #758191; border-radius: 3px; max-width: 100%; overflow: auto; background: #f9fcfc; line-height: 1.7em; }
+pre { white-space: pre-wrap; margin: 0 2rem 2rem 2rem; padding: 0 0 0 12px; border: 1px solid #758191; border-left: 3px solid #758191; border-radius: 3px; max-width: 100%; overflow: auto; background: #f9fcff; line-height: 1.7em; }
 
 pre, code { font-family: 'Droid Sans Mono', monospace; font-size: 0.9rem; }
 
-p code, ul code, li code { white-space: pre-wrap; border: 1px solid #758191; background: #f9fcfc; border-radius: 3px; margin: 0 2px; padding: 0 5px; }
+p code, ul code, li code { white-space: pre-wrap; border: 1px solid #758191; background: #f9fcff; border-radius: 3px; margin: 0 2px; padding: 0 5px; }
 
 .portfolio-list img { width: 45%; float: left; margin-right: 20px; }
 .portfolio-list .about-gallery div { text-align: center; }
