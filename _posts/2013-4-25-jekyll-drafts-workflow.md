@@ -14,11 +14,11 @@ I wanted my solution to satisfy the following set of requirements:
 
 - **Preview** - I wanted to be able to preview how my draft would look, both on the homepage index and the individual post page. This means I couldn't just set `published: false` in the YAML header.
 - **Same Repo** - I tried using Gist to store my drafts for a while, but I eventually abandoned it because my ideal solution is self-contained within the git repo that holds this blog. I like the idea of being able to clone my repo and have everything associated with my blog in one place.
-- **Simple** - I didn't want to use plugins or special scripts when I'm working with my posts. I wanted to keep it as minimalist as possible, with no dependencies other than git and jekyll. 
+- **Simple** - I didn't want to use plugins or special scripts when I'm working with my posts. I wanted to keep it as minimalist as possible, with no dependencies other than git and jekyll.
 - **Doesn't alter authoring** - I wanted to interfere with the act of authoring a post as little as possible. That meant I didn't want to add any extra YAML front matter keys or have to create a branch for each new post.
 
 # Solution:
-Fortunately, git makes it pretty easy to accomplish all of this. I created a new branch called "drafts" in my repo. It's what I have checked out most of the time, and I keep all of my drafts in it. They're stored in the _posts folder just like normal posts, which lets me preview them with `jekyll --server --auto` while I'm writing a post. I can make checkpoint commits while I'm writing a post to save my work and let me see and roll back my revisions to a post.
+Fortunately, git makes it pretty easy to accomplish all of this. I created a new branch called "drafts" in my repo. It's what I have checked out most of the time, and I keep all of my drafts in it. They're stored in the \_posts folder just like normal posts, which lets me preview them with `jekyll --server --auto` while I'm writing a post. I can make checkpoint commits while I'm writing a post to save my work and let me see and roll back my revisions to a post.
 
 ## Publishing
 When it's time to publish a draft post, I use git's ability to checkout individual files from one branch to another to get the draft into master, than push the changes to my host (I use GitHub to host this blog).
@@ -36,7 +36,7 @@ If I've changed something in the master branch, like the css or one of the post 
 {% highlight bash %}
 git checkout drafts
 git merge master
-{% endhighlight %} 
+{% endhighlight %}
 ...and my drafts branch is updated with the latest changes from the master branch! Yes, this is all *really* basic git stuff, but that's why it's so great. Git makes keeping the drafts branch up-to-date insanely simple.
 
 # Overview
