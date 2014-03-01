@@ -25,7 +25,7 @@ After that, I popped open Atom's preferences and activated the new syntax theme 
 
 The default font size on Atom is HUGE, and I'm a big fan of Adobe's Source Code Pro for code editing. Fixing both the font size and font family was pretty painless with `styles.less`:
 
-```less
+```css
 .tree-view {
   font-size: 11px;
 }
@@ -33,7 +33,6 @@ The default font size on Atom is HUGE, and I'm a big fan of Adobe's Source Code 
 .editor {
   font-family: 'Source Code Pro', sans-serif;
   font-size: 11px;
-
 }
 ```
 
@@ -46,13 +45,13 @@ The culprit is on line 27:
 CursorView.blinkPeriod = 800;
 ```
 
-This sets the cursor to complete a full blink cycle ever 800ms. The OSX default blink period is 1000ms. Apparently that .2s difference is just enough to drive me absolutely crazy.
+This sets the cursor to complete a full blink cycle every 800ms. The OSX default blink period is 1000ms. Apparently that .2s difference is just enough to drive me absolutely crazy.
 
 As of this writing, I haven't found a good way to configure this value without editing the app's source. Atom has a nice Sublime-esque JSON configuration file, but according to the [documentation](https://atom.io/docs/v0.59.0/customizing-atom#configuration-key-reference), there isn't a key to control the cursor blink rate yet. For now, I've just edited `cursor-view.js` to set the blinkPeriod to 1000ms. This will get overwritten by any updates, but for now there doesn't seem to be a better way to modify the blink behavior.
 
 I also added the following snipped to my `styles.less` file for a slight fade trasition on the cursor (just like Sublime):
 
-```less
+```css
 .editor.is-focused .cursor {
   transition: opacity .2s;
   &.blink-off {
@@ -66,7 +65,7 @@ I also added the following snipped to my `styles.less` file for a slight fade tr
 
 The last thing that bugged me about the default theme in Atom was the tab close buttons for modified & unsaved files. They show up as an electric blue outlined circle, which kinda ruins the whole subdued monochromatic thing the theme has going. I opted to change them to filled-in circles which match the tab title text color, (again, similar to Sublime). Here's the `styles.less` snippet:
 
-```less
+```css
 .tab-bar .tab.modified:not(:hover) .close-icon {
   border: 4px solid #AAA;
   border-radius: 12px;
