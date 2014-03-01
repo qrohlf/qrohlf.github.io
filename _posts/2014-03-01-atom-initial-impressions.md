@@ -1,7 +1,7 @@
 ---
 title: Atom Initial Impressions
 layout: post
-summary: Playing with GitHub's new text editor.
+summary: Breaking in GitHub's new text editor.
 date: 2014-03-01 09:28
 
 ---
@@ -25,7 +25,7 @@ I was happy to find that Atom supports TextMate themes and provides a utility to
 apm init --theme ~/.atom/packages/monokai-soda --convert Monokai\ Soda.tmTheme
 ```
 
-After that, I popped open Atom's preferences and activated the new syntax theme on the Themes panel.
+After that, I popped open Atom's preferences and activated the new syntax theme on the Themes panel. It's worth noting that Atom has graphical preferences in addition to json configuration files for various settings and key bindings. I'm not entirely sure how I feel about this, and I'm interested to see whether community plugins will tend towards using the preferences GUI or letting users specify their preferences in json.
 
 # 2. Fonts and Font Size
 
@@ -43,6 +43,8 @@ The default font size on Atom is HUGE, and I'm a big fan of Adobe's Source Code 
 ```
 
 # 3. Cursor Blinking
+One of the first things that bothered me when I started using Atom was that the cursor blinks at a slightly faster rate than every other app on my system. It ruined the whole "native app" feel and set me on edge.
+
 The cursor blink period is controlled by a hard-coded value in 'Resources/app/src/cursor-view.js' inside the app package (right click Atom.app, 'Show Package Contents').
 
 The culprit is on line 27:
@@ -55,7 +57,7 @@ This sets the cursor to complete a full blink cycle every 800ms. The OSX default
 
 As of this writing, I haven't found a good way to configure this value without editing the app's source. Atom has a nice Sublime-esque JSON configuration file, but according to the [documentation](https://atom.io/docs/v0.59.0/customizing-atom#configuration-key-reference), there isn't a key to control the cursor blink rate yet. For now, I've just edited `cursor-view.js` to set the blinkPeriod to 1000ms. This will get overwritten by any updates, but for now there doesn't seem to be a better way to modify the blink behavior.
 
-I also added the following snipped to my `styles.less` file for a slight fade trasition on the cursor (just like Sublime):
+I also added the following snippet to my `styles.less` file for a slight fade transition on the cursor (just like Sublime):
 
 ```css
 .editor.is-focused .cursor {
@@ -91,7 +93,7 @@ I opted to change them to filled-in circles which match the tab title text color
 }
 ```
 
-# 5. Conclusion
+# Conclusion
 
 As of right now, I'm very impressed with Atom. It's the most polished HTML/CSS/JS desktop app that I've ever used, and it's fantastically hackable. As a web developer who does a lot of front-end work, being able to use LESS and Javascript to hack on my text editor is something of a dream come true, and as someone who uses git for all of my projects the git/GitHub integration is really nice to have.
 
