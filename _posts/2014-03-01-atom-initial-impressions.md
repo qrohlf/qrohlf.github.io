@@ -13,6 +13,12 @@ Here's the breakdown:
 # 1. Color Scheme
 I use the excellent Soda theme for Sublime Text with the Monokai Soda TextMate theme for syntax highlighting. The default syntax highlighting scheme that ships with Atom is, in my opinion, far inferior to Monokai Soda, so the first order of business was to get that installed.
 
+![atom default theme](/images/atom-initial-impressions/atom-default.png)
+<span class='caption'>Atom default theme</span>
+
+![monokai soda theme](/images/atom-initial-impressions/monokai-soda.png)
+<span class='caption'>Monokai soda theme</span>
+
 I was happy to find that Atom supports TextMate themes and provides a utility to [convert them into LESS files](https://atom.io/docs/v0.62.0/converting-a-text-mate-theme) for use as native Atom themes. This is pretty sweet. So, to install Monokai Soda in Atom, I downloaded the [Monokai Soda TextMate theme](http://buymeasoda.github.com/soda-theme/extras/colour-schemes.zip), pointed my terminal to the directory I extracted it to, and converted it with
 
 ```bash
@@ -63,7 +69,16 @@ I also added the following snipped to my `styles.less` file for a slight fade tr
 
 # 4. Tab Close Icons
 
-The last thing that bugged me about the default theme in Atom was the tab close buttons for modified & unsaved files. They show up as an electric blue outlined circle, which kinda ruins the whole subdued monochromatic thing the theme has going. I opted to change them to filled-in circles which match the tab title text color, (again, similar to Sublime). Here's the `styles.less` snippet:
+The last thing that bugged me about the default theme in Atom was the tab close buttons for modified & unsaved files. They show up as an electric blue outlined circle, which kinda ruins the whole subdued monochromatic thing the theme has going.
+
+
+![atom default theme](/images/atom-initial-impressions/closebutton-default.png)
+<span class='caption'>Atom default modified close button</span>
+
+![monokai soda theme](/images/atom-initial-impressions/closebutton-modified.png)
+<span class='caption'>My edit</span>
+
+I opted to change them to filled-in circles which match the tab title text color, (again, similar to Sublime). Here's the `styles.less` snippet:
 
 ```css
 .tab-bar .tab.modified:not(:hover) .close-icon {
