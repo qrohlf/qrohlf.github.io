@@ -256,9 +256,9 @@ p.intro { font-weight: 300; font-size: 1.5rem; line-height: 2rem; color: #758191
 .post-index article { box-shadow: rgba(0, 0, 0, 0.15) 3px 3px 1px; background-color: white; border: 1px solid rgba(0, 0, 0, 0.2); border-radius: 0.25rem; padding: 1rem 1rem; margin: -webkit-calc(2rem - 2px) 0; margin: calc(2rem - 2px) 0; }
 .post-index article h2 a { font-size: 1.15rem; line-height: 1.5rem; color: #c72800; text-decoration: none; }
 
-.single h1 { font-weight: 300; font-size: 2rem; }
+.single h1 { font-weight: 300; font-size: 2rem; margin-top: 3rem; }
 .single header { text-align: center; margin-bottom: 2rem; }
-.single header h1 { color: #C72800; line-height: 2.5rem; }
+.single header h1 { color: #C72800; line-height: 2.5rem; margin-top: 0; }
 .single header h1:after { margin: 0.5rem auto; }
 .single header p { margin: 0 0 1rem 0; }
 .single h1:after { content: " "; display: block; width: 80%; height: 1px; background-color: #758191; margin: 0.5em 0; }
@@ -286,3 +286,5 @@ p code, ul code, li code { white-space: pre-wrap; border: 1px solid #758191; bac
   .portfolio-list h2 { text-align: center; } }
 
 .nobackground, .portfolio-list img, .single.portfolio img { background-color: transparent; background-image: none; border: none; }
+
+.caption { display: block; text-align: center; font-style: italic; }
