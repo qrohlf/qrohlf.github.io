@@ -37,30 +37,27 @@ hr { display: block; height: 1px; border: 0; border-top: 1px solid #cccccc; marg
 
 input, select { vertical-align: middle; }
 
-/* =Syntax Highlighting 
+/* =Syntax Highlighting
 ---------------------------------*/
 .highlight .c { color: #999988; font-style: italic; }
 
 /* Comment */
-.highlight .err { color: #a61717; background-color: #e3d2d2; }
-
-/* Error */
-.highlight .k { font-weight: bold; }
+.highlight .k { /*font-weight: bold*/ }
 
 /* Keyword */
-.highlight .o { font-weight: bold; }
+.highlight .o { /*font-weight: bold*/ }
 
 /* Operator */
 .highlight .cm { color: #999988; font-style: italic; }
 
 /* Comment.Multiline */
-.highlight .cp { color: #999999; font-weight: bold; }
+.highlight .cp { color: #999999; /*font-weight: bold*/ }
 
 /* Comment.Preproc */
 .highlight .c1 { color: #999988; font-style: italic; }
 
 /* Comment.Single */
-.highlight .cs { color: #999999; font-weight: bold; font-style: italic; }
+.highlight .cs { color: #999999; /*font-weight: bold;*/ font-style: italic; }
 
 /* Comment.Special */
 .highlight .gd { color: #000000; background-color: #ffdddd; }
@@ -90,7 +87,7 @@ input, select { vertical-align: middle; }
 .highlight .gp { color: #555555; }
 
 /* Generic.Prompt */
-.highlight .gs { font-weight: bold; }
+.highlight .gs { /*font-weight: bold*/ }
 
 /* Generic.Strong */
 .highlight .gu { color: #aaaaaa; }
@@ -99,19 +96,19 @@ input, select { vertical-align: middle; }
 .highlight .gt { color: #aa0000; }
 
 /* Generic.Traceback */
-.highlight .kc { font-weight: bold; }
+.highlight .kc { /*font-weight: bold*/ }
 
 /* Keyword.Constant */
-.highlight .kd { font-weight: bold; }
+.highlight .kd { /*font-weight: bold*/ }
 
 /* Keyword.Declaration */
-.highlight .kp { font-weight: bold; }
+.highlight .kp { /*font-weight: bold*/ }
 
 /* Keyword.Pseudo */
-.highlight .kr { font-weight: bold; }
+.highlight .kr { /*font-weight: bold*/ }
 
 /* Keyword.Reserved */
-.highlight .kt { color: #445588; font-weight: bold; }
+.highlight .kt { color: #445588; /*font-weight: bold*/ }
 
 /* Keyword.Type */
 .highlight .m { color: #009999; }
@@ -126,7 +123,7 @@ input, select { vertical-align: middle; }
 .highlight .nb { color: #0086b3; }
 
 /* Name.Builtin */
-.highlight .nc { color: #445588; font-weight: bold; }
+.highlight .nc { color: #445588; /*font-weight: bold*/ }
 
 /* Name.Class */
 .highlight .no { color: teal; }
@@ -135,10 +132,10 @@ input, select { vertical-align: middle; }
 .highlight .ni { color: purple; }
 
 /* Name.Entity */
-.highlight .ne { color: #990000; font-weight: bold; }
+.highlight .ne { color: #990000; /*font-weight: bold*/ }
 
 /* Name.Exception */
-.highlight .nf { color: #990000; font-weight: bold; }
+.highlight .nf { color: #990000; /*font-weight: bold*/ }
 
 /* Name.Function */
 .highlight .nn { color: #555555; }
@@ -150,7 +147,7 @@ input, select { vertical-align: middle; }
 .highlight .nv { color: teal; }
 
 /* Name.Variable */
-.highlight .ow { font-weight: bold; }
+.highlight .ow { /*font-weight: bold*/ }
 
 /* Operator.Word */
 .highlight .w { color: #bbbbbb; }
@@ -218,7 +215,7 @@ input, select { vertical-align: middle; }
 /* Literal.Number.Integer.Long */
 body::after { top: 20px; }
 
-* { padding: 0; margin: 0; font-size: 1rem; line-height: 2rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+* { padding: 0; margin: 0; font-size: 1rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 /* 1rem == 16px */
 html { border-top: 8px solid #961e00; padding: 2rem 0; font-size: 16px; font-family: 'Open Sans', sans-serif; background-color: #e1f2ff; }
@@ -275,7 +272,7 @@ p.intro { font-weight: 300; font-size: 1.5rem; line-height: 2rem; color: #758191
 
 .single:after { content: " "; display: block; width: 80%; height: 1px; background-color: #758191; margin: 4em auto 1em auto; }
 
-pre { white-space: pre-wrap; margin: 0 2rem 2rem 2rem; padding: 0 0 0 12px; border: 1px solid #758191; border-left: 3px solid #758191; border-radius: 3px; max-width: 100%; overflow: auto; background: #f9fcff; line-height: 1.7em; }
+pre { white-space: pre-wrap; margin: 0 2rem 2rem 2rem; padding: 0 0 0 12px; border: 1px solid #758191; border-left: 3px solid #758191; border-radius: 3px; max-width: 100%; overflow: auto; background: #FFF; line-height: 1.5; }
 
 pre, code { font-family: 'Droid Sans Mono', monospace; font-size: 0.9rem; }
 
