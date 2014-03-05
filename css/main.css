@@ -215,7 +215,7 @@ input, select { vertical-align: middle; }
 /* Literal.Number.Integer.Long */
 body::after { top: 20px; }
 
-* { padding: 0; margin: 0; font-size: 1rem; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+* { padding: 0; margin: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 /* 1rem == 16px */
 html { border-top: 8px solid #961e00; padding: 2rem 0; font-size: 16px; font-family: 'Open Sans', sans-serif; background-color: #e1f2ff; }
