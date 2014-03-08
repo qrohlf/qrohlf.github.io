@@ -5,4 +5,4 @@ permalink: /posts/:title
 markdown: redcarpet
 poole:
     word_separator: "-"
-    editor: "subl"
+    auto_open: true
