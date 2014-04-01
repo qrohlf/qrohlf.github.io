@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "16844",
+"creatorBuild": "16895",
 "files": {
 	"\/404.html": {
 		"fileType": 8192,
@@ -8,6 +8,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/404.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/404\/css\/main.css": {
@@ -16,6 +17,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/404\/css\/main.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/404\/css\/main.scss": {
@@ -27,6 +29,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/404\/css\/main.scss",
 		"outputAbbreviatedPath": "\/404\/css\/main.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -42,6 +45,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/404\/css\/mixins\/_html5reset-1.6.1.scss",
 		"outputAbbreviatedPath": "\/404\/css\/css\/_html5reset-1.6.1.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -57,6 +61,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/404\/css\/mixins\/_icomoon.scss",
 		"outputAbbreviatedPath": "\/404\/css\/css\/_icomoon.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -72,6 +77,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_drafts\/5-unusual-places.md",
 		"outputAbbreviatedPath": "\/_drafts\/5-unusual-places.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_drafts\/adventure-theres-an-app-for-that.md": {
@@ -83,6 +89,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_drafts\/adventure-theres-an-app-for-that.md",
 		"outputAbbreviatedPath": "\/_drafts\/adventure-theres-an-app-for-that.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_drafts\/portland-coffee-shops.md": {
@@ -94,6 +101,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_drafts\/portland-coffee-shops.md",
 		"outputAbbreviatedPath": "\/_drafts\/portland-coffee-shops.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_drafts\/self-hosted-heroku.md": {
@@ -105,6 +113,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_drafts\/self-hosted-heroku.md",
 		"outputAbbreviatedPath": "\/_drafts\/self-hosted-heroku.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_drafts\/sidekick.md": {
@@ -116,6 +125,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_drafts\/sidekick.md",
 		"outputAbbreviatedPath": "\/_drafts\/sidekick.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_includes\/footer.html": {
@@ -124,6 +134,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_includes\/footer.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_includes\/header.html": {
@@ -132,6 +143,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_includes\/header.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_layouts\/default.html": {
@@ -140,6 +152,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_layouts\/default.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_layouts\/page.html": {
@@ -148,6 +161,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_layouts\/page.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/_layouts\/post.html": {
@@ -156,138 +170,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/_layouts\/post.html",
 		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2013-10-19-ruby-whitespace-shenanigans.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2013-10-19-ruby-whitespace-shenanigans.md",
-		"outputAbbreviatedPath": "\/_posts\/2013-10-19-ruby-whitespace-shenanigans.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2013-11-16-5-best-jekyll-designs.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2013-11-16-5-best-jekyll-designs.md",
-		"outputAbbreviatedPath": "\/_posts\/2013-11-16-5-best-jekyll-designs.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2013-4-17-troubleshooting-is-learning.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2013-4-17-troubleshooting-is-learning.md",
-		"outputAbbreviatedPath": "\/_posts\/2013-4-17-troubleshooting-is-learning.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2013-4-25-jekyll-drafts-workflow.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2013-4-25-jekyll-drafts-workflow.md",
-		"outputAbbreviatedPath": "\/_posts\/2013-4-25-jekyll-drafts-workflow.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2013-4-3-better-opensans.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2013-4-3-better-opensans.md",
-		"outputAbbreviatedPath": "\/_posts\/2013-4-3-better-opensans.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2013-4-5-barebones-vertical-centering.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2013-4-5-barebones-vertical-centering.md",
-		"outputAbbreviatedPath": "\/_posts\/2013-4-5-barebones-vertical-centering.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2013-6-1-startup-weekend-pdx.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2013-6-1-startup-weekend-pdx.md",
-		"outputAbbreviatedPath": "\/_posts\/2013-6-1-startup-weekend-pdx.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2013-6-26-3D-Polar-ListPlots-in-Mathematica.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2013-6-26-3D-Polar-ListPlots-in-Mathematica.md",
-		"outputAbbreviatedPath": "\/_posts\/2013-6-26-3D-Polar-ListPlots-in-Mathematica.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2013-7-27-creating-lisst.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2013-7-27-creating-lisst.md",
-		"outputAbbreviatedPath": "\/_posts\/2013-7-27-creating-lisst.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2014-03-01-atom-initial-impressions.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2014-03-01-atom-initial-impressions.md",
-		"outputAbbreviatedPath": "\/_posts\/2014-03-01-atom-initial-impressions.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2014-2-3-New-404.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2014-2-3-New-404.md",
-		"outputAbbreviatedPath": "\/_posts\/2014-2-3-New-404.html",
-		"outputPathIsSetByUser": 0
-		},
-	"\/_posts\/2014-2-9-learn-to-code-then-learn-cs.md": {
-		"enableFootnoteSupport": 0,
-		"enableSmartyPants": 1,
-		"expandTabs": 1,
-		"fileType": 4096,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/_posts\/2014-2-9-learn-to-code-then-learn-cs.md",
-		"outputAbbreviatedPath": "\/_posts\/2014-2-9-learn-to-code-then-learn-cs.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/about.md": {
@@ -299,6 +182,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/about.md",
 		"outputAbbreviatedPath": "\/about.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/main.css": {
@@ -307,6 +191,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/main.css",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/css\/main.scss": {
@@ -318,6 +203,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/main.scss",
 		"outputAbbreviatedPath": "\/css\/main.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 0,
@@ -333,6 +219,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/mixins\/_html5reset-1.6.1.scss",
 		"outputAbbreviatedPath": "\/css\/css\/_html5reset-1.6.1.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -348,6 +235,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/mixins\/_pygments.scss",
 		"outputAbbreviatedPath": "\/css\/css\/_pygments.css",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
 		"shouldRunAutoprefixer": 0,
@@ -360,6 +248,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/googlec41a9432e99342f8.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/images\/3D-Polar-ListPlots-in-Mathematica\/exampleplot.png": {
@@ -369,6 +258,7 @@
 		"initialSize": 77082,
 		"inputAbbreviatedPath": "\/images\/3D-Polar-ListPlots-in-Mathematica\/exampleplot.png",
 		"outputAbbreviatedPath": "\/images\/3D-Polar-ListPlots-in-Mathematica\/exampleplot.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -379,6 +269,7 @@
 		"initialSize": 218956,
 		"inputAbbreviatedPath": "\/images\/5-best-jekyll-designs\/cican.png",
 		"outputAbbreviatedPath": "\/images\/5-best-jekyll-designs\/cican.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -389,6 +280,7 @@
 		"initialSize": 118061,
 		"inputAbbreviatedPath": "\/images\/5-best-jekyll-designs\/holman.png",
 		"outputAbbreviatedPath": "\/images\/5-best-jekyll-designs\/holman.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -399,6 +291,7 @@
 		"initialSize": 350232,
 		"inputAbbreviatedPath": "\/images\/5-best-jekyll-designs\/mmistakes.png",
 		"outputAbbreviatedPath": "\/images\/5-best-jekyll-designs\/mmistakes.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -409,6 +302,7 @@
 		"initialSize": 46459,
 		"inputAbbreviatedPath": "\/images\/5-best-jekyll-designs\/sparanoid.png",
 		"outputAbbreviatedPath": "\/images\/5-best-jekyll-designs\/sparanoid.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -419,6 +313,7 @@
 		"initialSize": 233537,
 		"inputAbbreviatedPath": "\/images\/5-best-jekyll-designs\/warpspire.png",
 		"outputAbbreviatedPath": "\/images\/5-best-jekyll-designs\/warpspire.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -429,6 +324,7 @@
 		"initialSize": 85547,
 		"inputAbbreviatedPath": "\/images\/atom-initial-impressions\/atom-default.png",
 		"outputAbbreviatedPath": "\/images\/atom-initial-impressions\/atom-default.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -439,6 +335,7 @@
 		"initialSize": 8585,
 		"inputAbbreviatedPath": "\/images\/atom-initial-impressions\/closebutton-default.png",
 		"outputAbbreviatedPath": "\/images\/atom-initial-impressions\/closebutton-default.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -449,6 +346,7 @@
 		"initialSize": 8565,
 		"inputAbbreviatedPath": "\/images\/atom-initial-impressions\/closebutton-modified.png",
 		"outputAbbreviatedPath": "\/images\/atom-initial-impressions\/closebutton-modified.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -459,6 +357,7 @@
 		"initialSize": 85422,
 		"inputAbbreviatedPath": "\/images\/atom-initial-impressions\/monokai-soda.png",
 		"outputAbbreviatedPath": "\/images\/atom-initial-impressions\/monokai-soda.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -469,6 +368,7 @@
 		"initialSize": 191915,
 		"inputAbbreviatedPath": "\/images\/creating-lisst\/lisst.png",
 		"outputAbbreviatedPath": "\/images\/creating-lisst\/lisst.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -479,6 +379,7 @@
 		"initialSize": 172521,
 		"inputAbbreviatedPath": "\/images\/creating-lisst\/whereis-old.png",
 		"outputAbbreviatedPath": "\/images\/creating-lisst\/whereis-old.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -489,6 +390,7 @@
 		"initialSize": 705,
 		"inputAbbreviatedPath": "\/images\/logo.png",
 		"outputAbbreviatedPath": "\/images\/logo.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -499,6 +401,7 @@
 		"initialSize": 184866,
 		"inputAbbreviatedPath": "\/images\/new-404\/404.png",
 		"outputAbbreviatedPath": "\/images\/new-404\/404.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -509,6 +412,7 @@
 		"initialSize": 123663,
 		"inputAbbreviatedPath": "\/images\/portfolio\/headlamp-dispatches.png",
 		"outputAbbreviatedPath": "\/images\/portfolio\/headlamp-dispatches.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -519,6 +423,7 @@
 		"initialSize": 151387,
 		"inputAbbreviatedPath": "\/images\/portfolio\/landbpipe.png",
 		"outputAbbreviatedPath": "\/images\/portfolio\/landbpipe.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -529,6 +434,7 @@
 		"initialSize": 120631,
 		"inputAbbreviatedPath": "\/images\/portfolio\/landbpipe\/landbpipe-detail.png",
 		"outputAbbreviatedPath": "\/images\/portfolio\/landbpipe\/landbpipe-detail.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -539,6 +445,7 @@
 		"initialSize": 311104,
 		"inputAbbreviatedPath": "\/images\/portfolio\/landbpipe\/landbpipe-large.png",
 		"outputAbbreviatedPath": "\/images\/portfolio\/landbpipe\/landbpipe-large.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -549,6 +456,7 @@
 		"initialSize": 83126,
 		"inputAbbreviatedPath": "\/images\/portfolio\/lisst.png",
 		"outputAbbreviatedPath": "\/images\/portfolio\/lisst.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -559,6 +467,7 @@
 		"initialSize": 94370,
 		"inputAbbreviatedPath": "\/images\/portfolio\/scoutfitters.png",
 		"outputAbbreviatedPath": "\/images\/portfolio\/scoutfitters.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -569,6 +478,7 @@
 		"initialSize": 150501,
 		"inputAbbreviatedPath": "\/images\/portfolio\/scoutfitters\/scoutfitters-guides.png",
 		"outputAbbreviatedPath": "\/images\/portfolio\/scoutfitters\/scoutfitters-guides.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -579,6 +489,7 @@
 		"initialSize": 185063,
 		"inputAbbreviatedPath": "\/images\/portfolio\/scoutfitters\/scoutfitters-large.png",
 		"outputAbbreviatedPath": "\/images\/portfolio\/scoutfitters\/scoutfitters-large.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -589,6 +500,7 @@
 		"initialSize": 143800,
 		"inputAbbreviatedPath": "\/images\/portfolio\/sidekick.png",
 		"outputAbbreviatedPath": "\/images\/portfolio\/sidekick.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -599,6 +511,7 @@
 		"initialSize": 98650,
 		"inputAbbreviatedPath": "\/images\/portfolio\/what-else-would-i-say.png",
 		"outputAbbreviatedPath": "\/images\/portfolio\/what-else-would-i-say.png",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -609,6 +522,7 @@
 		"initialSize": 41247,
 		"inputAbbreviatedPath": "\/images\/profile.jpg",
 		"outputAbbreviatedPath": "\/images\/profile.jpg",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
@@ -618,6 +532,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/js\/main.js": {
@@ -626,6 +541,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/js\/main.js",
 		"outputAbbreviatedPath": "\/js\/min\/main-ck.js",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
@@ -636,6 +552,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/projects\/index.html",
 		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/projects\/landbpipe.md": {
@@ -647,6 +564,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/projects\/landbpipe.md",
 		"outputAbbreviatedPath": "\/projects\/landbpipe.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/projects\/scoutfitters.md": {
@@ -658,6 +576,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/projects\/scoutfitters.md",
 		"outputAbbreviatedPath": "\/projects\/scoutfitters.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
 	"\/README.md": {
@@ -669,6 +588,7 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/README.md",
 		"outputAbbreviatedPath": "\/README.html",
+		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		}
 	},
@@ -1253,7 +1173,7 @@
 	"sassUseLibsass": 0,
 	"shouldRunAutoprefixer": 0,
 	"shouldRunBless": 0,
-	"skippedItemsString": ".svn, .git, .hg, log, _logs, _cache, cache, logs, _site",
+	"skippedItemsString": ".svn, .git, .hg, log, _logs, _cache, cache, logs, _site, _posts, _drafts, .md",
 	"slimAutoOutputPathRelativePath": "",
 	"slimAutoOutputPathReplace1": "",
 	"slimAutoOutputPathReplace2": "",
