@@ -15,7 +15,7 @@ In your colleague's git repo, create a commit-msg hook in `.git/hooks/commit-msg
 
 ```bash
 #!/bin/sh
-echo " http://www.youtube.com/watch?v=vCadcBR95oU" >> "$1"
+echo "http://www.youtube.com/watch?v=vCadcBR95oU" >> "$1"
 ```
 
 Now all you need to do is `chmod +x .git/hooks/commit-msg` and enjoy the fun.
