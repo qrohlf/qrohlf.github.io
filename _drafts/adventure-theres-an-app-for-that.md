@@ -1,5 +1,5 @@
 ---
-title: Adventure: There's an App for That
+title: "Adventure: There's an App for That"
 layout: post
 date: 2014-03-08
 ---

@@ -1,5 +1,5 @@
 ---
-title: Field Notes: Portland Coffee Shops
+title: "Field Notes: Portland Coffee Shops"
 summary: My personal notes on spots to read and study in Portland
 layout: post
 ---
