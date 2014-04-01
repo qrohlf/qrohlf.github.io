@@ -4,7 +4,7 @@ layout: post
 summary: April Fools' is one of my favorite days. Here are some ways I like to celebrate.
 ---
 
-Mischief is an important human tendency. From Arthur C. Clarke's fictional utopia of Diaspar to the royal courts of medieval times, pranksters have always played an important role. I myself firmly believe that April Fools' day is an excellent time to tap into some creativity and to come up with ways to make people laugh. In that spirit, I'd like to share a couple of my own creations:
+Mischief is an important human tendency. From Arthur C. Clarke's fictional utopia of Diaspar to the royal courts of medieval times, pranksters have always played an important role in society. I myself firmly believe that April Fools' day is an excellent time to tap into some creativity and to come up with ways to make people laugh. In that spirit, I'd like to share a couple of my own creations:
 
 # 1. Git *Push It*
 *inspired by [this tweet](https://twitter.com/codinghorror/status/21559239552)*
