@@ -195,6 +195,9 @@ p.intro {
     p, ul, ol, hr {
         margin-bottom: 2rem;
     }
+    ul, ol {
+        margin-left: 2rem;
+    }
     img {
         padding: 10px;
         display: block;
