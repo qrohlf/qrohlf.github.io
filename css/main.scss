@@ -41,11 +41,15 @@ html {
     background-color: $background;
 }
 
+@function px($rem) {
+    @return $rem/(1rem)*16px; //strip units and multiply by 16px
+}
+
 body {
     font-size: 1rem;
     line-height: 2rem;
-    width: -webkit-calc(700px + 2 * 4rem);
-    width: calc(700px + 2 * 4rem);
+    width: -webkit-calc(700px + 2 * px(4rem));
+    width: calc(700px + 2 * px(4rem));
     max-width: 100%;
     margin: 0 auto;
     padding: 0 4rem;
@@ -149,8 +153,8 @@ p.intro {
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 0.25rem;
         padding: 1rem 1rem;
-        margin: -webkit-calc(2rem - 2px) 0;
-        margin: calc(2rem - 2px) 0;
+        margin: -webkit-calc(px(2rem) - 2px) 0;
+        margin: calc(px(2rem) - 2px) 0;
         h2 a {
             font-size: 1.15rem;
             line-height: 1.5rem;
@@ -263,8 +267,8 @@ li code {
     padding: 0 5px;
 }
 
-//Portfolio Stuff
-.portfolio-list {
+//project stuff
+.project-list {
     img {
         @extend .nobackground;
         width: 45%;
