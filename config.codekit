@@ -356,6 +356,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/projects\/hackathon-starter-sinatra.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 57577,
+		"inputAbbreviatedPath": "\/images\/projects\/hackathon-starter-sinatra.png",
+		"outputAbbreviatedPath": "\/images\/projects\/hackathon-starter-sinatra.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/projects\/headlamp-dispatches.png": {
 		"fileType": 32768,
 		"ignore": 0,
