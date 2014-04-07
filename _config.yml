@@ -7,3 +7,4 @@ future: true
 poole:
     word_separator: "-"
     auto_open: true
+include: [".well-known"]
