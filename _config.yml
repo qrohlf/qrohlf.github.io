@@ -8,3 +8,4 @@ poole:
     word_separator: "-"
     auto_open: true
 include: [".well-known"]
+exclude: [compass.rb, config.ru, Gemfile, Gemfile.lock, Procfile, Rakefile, Read.md, sass, unicorn.rb, vendor]
