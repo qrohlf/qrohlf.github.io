@@ -2,6 +2,7 @@
 title: About
 layout: page
 summary: My name is Quinn Rohlf, and I build neat things as a web developer and student in Portland, Oregon.
+permalink: /about/index.html
 ---
 # Hello!
 I'm Quinn. I like to build interesting things and solve hard problems. I freelance as a web developer, work on a couple of  [interesting side projects](/projects), and write on this blog. I have a background in full-stack web development and spend a lot of time playing with design ideas and new ways to present content. I believe that simple and thoughtful design can make the world a better place.
