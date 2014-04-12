@@ -6,3 +6,4 @@ _site
 bourbon
 neat
 *.css.map
+images/_templates
