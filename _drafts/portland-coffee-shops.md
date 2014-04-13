@@ -15,3 +15,11 @@ Very small (3ish tables). Modern but not cold (unlike Jola!). Friendly staff. Do
 # Jola Cafe
 
 Quite large, lots of communal tables. 
+
+# Isla's Garden Cafe
+
+???? Need to check this one out
+
+# Ross Island Grocery & Cafe
+
+Nice patio. 1.27 Mbps up/0.42 Mbps down (according to speedtest.net), so that's a little less than ideal for webdev. Could be related to interference from the ~15 other networks in range.
