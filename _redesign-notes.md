@@ -17,6 +17,14 @@ Since this site is 100% frontend code, it might make sense to use something like
 
 Looks like you might be writing an asset pipeline? https://github.com/ck86/main-bower-files
 
+
+## Goals?
+
+Front page should accomplish... what?
+Introduce me.
+Link to writing.
+Link to projects.
+
 ## Snippets
 
 Old post index code:

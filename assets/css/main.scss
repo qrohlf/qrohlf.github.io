@@ -107,18 +107,6 @@ a {
   }
 }
 
-@mixin color-scheme-light() {
-  background-color: $white;
-  color: $text-dark;
-  a {
-    color: $material-gray-600;
-  }
-
-  a:hover {
-    color: $material-gray-700;
-  }
-}
-
 // ==== Components ====
 
 .content {
@@ -128,22 +116,21 @@ a {
 
 .chip {
   display: inline-block;
-  border-radius: 2px;
+  border-radius: 3px;
   font-size: 1rem;
   padding: 0 1rem;
-  @include color-scheme-light();
-  @include shadow();
-}
-
-.action-chip {
-  @extend .chip;
+  background-color: $white;
+  color: $material-gray-500;
+  @include transition(all .2s ease);
+  &:hover {
+    color: $material-gray-600;
+    border-color: #ccc;
+  }
   height: 2rem;
   line-height: 2rem;
   vertical-align: middle;
-  @include transition(all 0.2s ease);
-  &:hover {
-    @include transform(scale(1.03) rotate(2deg));
-  }
+  border: 1px solid #ddd;
+  // @include shadow();
 }
 
 .nav-chips {
@@ -151,17 +138,10 @@ a {
   margin: 0;
   padding: 0;
   li {
-    perspective: 10000px;
     display: inline-block;
     margin: 0 0.5rem;
     a {
-      @extend .action-chip;
-    }
-    a, a:hover {
-      color: $material-gray-700;
-    }
-    &:first-child {
-      margin-left: 0;
+      @extend .chip;
     }
   }
 }
@@ -169,11 +149,12 @@ a {
 // ==== Layout ====
 
 header.primary {
-  @include wrapper(#eee);
+  @include wrapper(#f7f7f7);
   height: 100vh;
   padding-top: 20vh;
   h1 {
     color: $brand-qrohlf;
+    // color: $material-gray-700;
   }
 
   h2 { @extend .sr-only; }
