@@ -1,0 +1,197 @@
+---
+---
+@charset "UTF-8";
+
+
+// ==== Color Scheme ====
+
+
+// Google Material Design colors
+$material-light-blue: #03a9f4;
+$material-yellow: #ffeb3b;
+$material-yellow-A700: #ffd600;
+$material-yellow-200: #fff59d;
+$material-light-blue-800: #0277bd;
+$material-light-blue-900: #01579b;
+$material-gray-500: #9e9e9e;
+$material-gray-600: #757575;
+$material-gray-700: #616161;
+$material-amber: #ffc107;
+
+$brand-qrohlf: #C72800;
+$brand-primary: $material-light-blue;
+$text-dark: #2d3a3f;
+$text-light: #fff;
+$white: #fff;
+$border-color: $text-dark;
+
+// Just a little bootstrap
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/normalize";
+@import "bootstrap/scaffolding";
+@import "bootstrap/grid";
+
+// ==== Setup ====
+html {
+  height: 100%;
+  font-size: 16px; // 1rem == 16px
+}
+
+body {
+  min-height: 100%;
+  font-family: lato, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a, a:hover {
+    color: inherit;
+  }
+
+  font-weight: normal;
+  margin: 0; //FIXME
+}
+
+// ==== Typography ====
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+a {
+  @include transition(color .2s ease);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// ==== Mixins ====
+@mixin transform($args...) {
+  -webkit-transform: $args;
+      -ms-transform: $args; // IE9 only
+       -o-transform: $args;
+          transform: $args;
+}
+
+@mixin wrapper($color) {
+  margin: 0 0;
+  padding: 1rem;
+  background-color: $color;
+  @if lightness($color) < 50% {
+    color: $text-light;
+    a {
+      color: $material-yellow-200;
+    }
+    a:hover {
+      color: $material-yellow;
+    }
+  } @else {
+    color: $text-dark;
+  }
+  @include clearfix();
+}
+
+@mixin shadow() {
+  -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+
+  &:hover {
+    -moz-box-shadow: 0 2px 8px 0 rgba(0,0,0,.26);
+    -webkit-box-shadow: 0 2px 8px 0 rgba(0,0,0,.26);
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,.26);
+  }
+}
+
+@mixin color-scheme-light() {
+  background-color: $white;
+  color: $text-dark;
+  a {
+    color: $material-gray-600;
+  }
+
+  a:hover {
+    color: $material-gray-700;
+  }
+}
+
+// ==== Components ====
+
+.content {
+  @extend .col-md-6;
+  @extend .col-md-offset-3;
+}
+
+.chip {
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 1rem;
+  padding: 0 1rem;
+  @include color-scheme-light();
+  @include shadow();
+}
+
+.action-chip {
+  @extend .chip;
+  height: 2rem;
+  line-height: 2rem;
+  vertical-align: middle;
+  @include transition(all 0.2s ease);
+  &:hover {
+    @include transform(scale(1.03) rotate(2deg));
+  }
+}
+
+.nav-chips {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  li {
+    perspective: 10000px;
+    display: inline-block;
+    margin: 0 0.5rem;
+    a {
+      @extend .action-chip;
+    }
+    a, a:hover {
+      color: $material-gray-700;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+// ==== Layout ====
+
+header.primary {
+  @include wrapper(#eee);
+  height: 100vh;
+  padding-top: 20vh;
+  h1 {
+    color: $brand-qrohlf;
+  }
+
+  h2 { @extend .sr-only; }
+  nav ul { @extend .nav-chips; }
+
+  font-size: 1.25rem;
+  p {
+    font-size: inherit;
+    text-style: italic;
+    color: $material-gray-500;
+  }
+  text-align: center;
+}
+
+main {
+  @include wrapper(#fff)
+}
+
+footer.primary {
+  @include wrapper($material-light-blue);
+}

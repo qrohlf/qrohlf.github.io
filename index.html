@@ -1,16 +1,18 @@
 ---
-layout: default
+layout: scaffold
 ---
-<p class="intro">My name is Quinn Rohlf and I'm a web developer and student in Portland, Oregon. I like to build neat things and solve problems.</p>
-<section class="post-index">
-    <h1>Post Index</h1>
-{% for post in site.posts %}
-    <article>
-      	<h2><a href="{{post.url}}">{{ post.title }}</a></h2>
-        <p>{{ post.summary }}</p>
-        <footer class="post-meta">
-        	<p>{{ post.date | date: "%d %h %Y" }}</p>
-      	</footer>
-    </article>
-{% endfor %}
-</section>
+<header class="primary">
+  <div class="content">
+    <h1>Quinn Rohlf</h1>
+    <p>Adventurer and maker of nice things. Joining <a href="http://newrelic.com/">New Relic</a> in June to help people do more with their data. @qrohlf on <a href="https://github.com/qrohlf">GitHub</a> &amp; <a href="https://twitter.com/qrohlf">Twitter</a>.</p>
+    <h2>Navigation</h2>
+    <nav>
+      <ul>
+      <li><a href="/writing">Writing</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/about">About</a></li>
+      </ul>
+    </nav>
+    <a class="down-arrow" href="#writing"></a>
+  </div>
+</header>

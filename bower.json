@@ -1,0 +1,13 @@
+{
+  "name": "qrohlf",
+  "version": "0.1.0",
+  "authors": [
+    "Quinn Rohlf <qr@qrohlf.com>"
+  ],
+  "description": "Personal website",
+  "license": "Copyright Quinn Rohlf",
+  "homepage": "http://qrohlf.com",
+  "private": true,
+  "dependencies": {
+  }
+}
