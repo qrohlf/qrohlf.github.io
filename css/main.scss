@@ -1,8 +1,10 @@
+---
+---
 @charset "UTF-8";
 // html5 reset
-@import "mixins/html5reset-1.6.1";
+@import "_mixins/html5reset-1.6.1";
 // code highlighting
-@import "mixins/pygments";
+@import "_mixins/pygments";
 // import baseline for designing
 // @import "http://basehold.it/32/ff0000";
 // adjust grid offset from basehold.it
