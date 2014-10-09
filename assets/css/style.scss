@@ -92,7 +92,7 @@ $brand-qrohlf: #C72800;
 //
 // =============================================================
 // =============================================================
-.colors-default {
+.colors-gray-bg {
   @include color-scheme( $gray-100,
                          $gray-500,
                          $light-blue-500,
@@ -155,7 +155,7 @@ body {
   // Base text size
   font-size: 1rem;
   // Colors
-  @extend .colors-default;
+  @extend .colors-gray-bg;
   // prevent margin collapse
   padding-top: 1px;
   // overflow: hidden;
@@ -183,6 +183,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 4rem;
+  color: $light-blue-800;
+  font-weight: bold;
 }
 
 // Link defaults
@@ -236,33 +238,6 @@ a:hover {
   }
 }
 
-.down-arrow {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  margin-left: -1.5rem;
-  display: inline-block;
-  height: 3rem;
-  width: 3rem;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
-  @include transition(all .2s ease);
-  &:hover {
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
-    @include scale(1.04);
-  }
-  &::after {
-    content: '';
-    display: inline-block;
-    background: url(/images/arrow-down.png) center no-repeat;
-    height: 3rem;
-    width: 3rem;
-    background-size: 100%;
-    opacity: 0.5;
-  }
-}
-
 // ==== Hero unit for landing page ====
 #hero {
   position: absolute;
@@ -285,17 +260,50 @@ a:hover {
   h2 {
     @extend .sr-only;
   }
-
-  nav {
-    ul {@extend .nav-chips;}
-  }
 }
 
 #top-page {
   min-height: 100vh;
   position: relative;
+  // maybe make this a component eventually?
+  .down-arrow {
+    position: absolute;
+    //15% is the minimum needed to clear the navigation bar on iOS8 mobile Safari
+    bottom: 15%; //FIXME this looks bad in landscape orientation. Should either set a pixel min height on the top page, or fix somehow.
+    left: 50%;
+    margin-left: -1.5rem;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+    @include transition(all .2s ease);
+    &:hover {
+      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+      @include scale(1.04);
+    }
+    &::after {
+      content: '';
+      display: inline-block;
+      background: url(/images/arrow-down.png) center no-repeat;
+      height: 3rem;
+      width: 3rem;
+      background-size: 100%;
+      opacity: 0.5;
+    }
+  }
+}
+
+// General page styles
+header {
+  @extend .colors-gray-bg;
 }
 
 main {
   @extend .colors-white-bg;
+}
+
+nav {
+  ul {@extend .nav-chips;}
 }
