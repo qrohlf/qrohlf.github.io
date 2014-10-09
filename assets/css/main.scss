@@ -140,6 +140,11 @@ a {
   li {
     display: inline-block;
     margin: 0 0.5rem;
+    background-color: red;
+    &:first-child {
+      margin: 0;
+      color: blue;
+    }
     a {
       @extend .chip;
     }

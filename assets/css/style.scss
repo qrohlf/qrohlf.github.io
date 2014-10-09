@@ -35,6 +35,8 @@ $light-blue-800: #0277bd;
 $light-blue-900: #01579b;
 
 $brand-qrohlf: #C72800;
+$brand-qrohlf-alt: #961E00;
+$bluegray: #3f5767;
 
 
 // =============================================================
@@ -85,6 +87,27 @@ $brand-qrohlf: #C72800;
   }
 }
 
+@mixin chip-variant( $background,
+                     $background-hover,
+                     $text,
+                     $text-hover,
+                     $border,
+                     $border-hover) {
+  .chip {
+    background: $background;
+    border-color: $border;
+    color: $text;
+    &:hover {
+      color: $text-hover;
+      border-color: $border-hover;
+      background: $background-hover;
+    }
+    a, a:hover {
+      color: inherit;
+    }
+  }
+}
+
 // =============================================================
 // =============================================================
 //
@@ -94,9 +117,19 @@ $brand-qrohlf: #C72800;
 // =============================================================
 .colors-gray-bg {
   @include color-scheme( $gray-100,
-                         $gray-500,
+                         $gray-700,
                          $light-blue-500,
                          $light-blue-700);
+    //chip colors
+  @include chip-variant( white,
+                         white,
+                         $gray-600,
+                         $gray-700,
+                         #ddd,
+                         #ccc);
+  h1 {
+    color: $bluegray;
+  }
 }
 
 .colors-white-bg {
@@ -104,6 +137,25 @@ $brand-qrohlf: #C72800;
                          $gray-700,
                          $light-blue-500,
                          $light-blue-700);
+}
+
+.colors-blue-bg {
+  //basic colors - background, links, text
+  @include color-scheme( lighten($bluegray, 20%),
+                         $gray-200,
+                         $light-blue-100,
+                         $light-blue-300);
+  //chip colors
+  @include chip-variant( darken($bluegray, 5%),
+                         darken($bluegray, 10%),
+                         $gray-200,
+                         $gray-100,
+                         $bluegray,
+                         darken($bluegray, 5%));
+  h1 {
+    color: #00acc1;
+  }
+
 }
 
 .wrapper {
@@ -183,8 +235,8 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 4rem;
-  color: $light-blue-800;
-  font-weight: bold;
+  // color: $light-blue-800;
+  color: $brand-qrohlf;//#0097a7;
 }
 
 // Link defaults
@@ -198,7 +250,7 @@ a:hover {
 
 // ==== Components ====
 .content {
-  max-width: 800px;
+  max-width: 600px;
   padding: 1rem;
   margin: 0 auto;
 }
@@ -215,17 +267,6 @@ a:hover {
   @include transition(all .2s ease);
 }
 
-.chip-default {
-  @extend .chip;
-  background: white;
-  border-color: #ddd;
-  color: $gray-500;
-  &:hover {
-    color: $gray-600;
-    border-color: #ccc;
-  }
-}
-
 // Nav Chips are a list of navigation links shown as chips
 .nav-chips {
   list-style-type: none;
@@ -234,8 +275,60 @@ a:hover {
   li {
     display: inline-block;
     margin: 0.5rem;
-    a {@extend .chip-default;}
+    &:first-child {
+      margin-left: 0;
+    }
+    a {@extend .chip;}
   }
+}
+
+.arrow-down {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  @include transition(all .2s ease);
+  &:hover {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+    @include scale(1.04);
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    background: url(/images/arrow-down.png) center no-repeat;
+    height: 3rem;
+    width: 3rem;
+    background-size: 100%;
+    opacity: 0.5;
+  }
+}
+
+.arrow-left {
+  @extend .arrow-down;
+  &::after {
+    @include rotate(90deg);
+  }
+}
+
+.post {
+  position: relative;
+  .arrow-left {
+    position: absolute;
+    left: -6rem;
+    top: 4rem;
+  }
+  .post-body {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+
+.post-meta {
+  font-style: italic;
+  text-align: right;
 }
 
 // ==== Hero unit for landing page ====
@@ -244,17 +337,17 @@ a:hover {
   left: 0;
   right: 0;
   top: 40%;
-  text-align: center;
+  text-align: left;
   font-size: 1.25rem;
 
   .content {
     @include translate(0, -50%);
-    max-width: 600px;
   }
 
   h1 {
     margin-top: 0;
     color: $brand-qrohlf;
+    font-size: 2rem;
   }
 
   h2 {
@@ -263,45 +356,37 @@ a:hover {
 }
 
 #top-page {
+  // @extend .colors-blue-bg; definitely not a good place for a dark background
+  @extend .colors-gray-bg;
   min-height: 100vh;
   position: relative;
-  // maybe make this a component eventually?
-  .down-arrow {
+  // Position the arrow
+  .arrow-down {
     position: absolute;
     //15% is the minimum needed to clear the navigation bar on iOS8 mobile Safari
     bottom: 15%; //FIXME this looks bad in landscape orientation. Should either set a pixel min height on the top page, or fix somehow.
     left: 50%;
     margin-left: -1.5rem;
-    display: inline-block;
-    height: 3rem;
-    width: 3rem;
-    background: white;
-    border-radius: 50%;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
-    @include transition(all .2s ease);
-    &:hover {
-      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
-      @include scale(1.04);
-    }
-    &::after {
-      content: '';
-      display: inline-block;
-      background: url(/images/arrow-down.png) center no-repeat;
-      height: 3rem;
-      width: 3rem;
-      background-size: 100%;
-      opacity: 0.5;
-    }
   }
 }
 
 // General page styles
 header {
-  @extend .colors-gray-bg;
+  @extend .colors-blue-bg;
+
+  padding: 1rem 0;
 }
 
 main {
   @extend .colors-white-bg;
+}
+
+main.single-post-page {
+  @extend .colors-gray-bg;
+  .content {
+    max-width: 800px;
+  }
+  border-top: 0.5rem solid $brand-qrohlf-alt;
 }
 
 nav {
