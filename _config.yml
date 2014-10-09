@@ -9,3 +9,4 @@ poole:
 include: [".well-known"]
 sass:
     sass_dir: assets/_bower/bootstrap-sass-official/assets/stylesheets/
+    sourcemap: true

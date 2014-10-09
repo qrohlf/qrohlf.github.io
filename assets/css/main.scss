@@ -69,14 +69,6 @@ a {
   }
 }
 
-// ==== Mixins ====
-@mixin transform($args...) {
-  -webkit-transform: $args;
-      -ms-transform: $args; // IE9 only
-       -o-transform: $args;
-          transform: $args;
-}
-
 @mixin wrapper($color) {
   margin: 0 0;
   padding: 1rem;
@@ -107,6 +99,16 @@ a {
   }
 }
 
+@mixin standard-border($hover-effect: false) {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  @if $hover-effect {
+    &:hover {
+      border-color: #ccc;
+    }
+  }
+}
+
 // ==== Components ====
 
 .content {
@@ -116,7 +118,6 @@ a {
 
 .chip {
   display: inline-block;
-  border-radius: 3px;
   font-size: 1rem;
   padding: 0 1rem;
   background-color: $white;
@@ -124,12 +125,11 @@ a {
   @include transition(all .2s ease);
   &:hover {
     color: $material-gray-600;
-    border-color: #ccc;
   }
   height: 2rem;
   line-height: 2rem;
   vertical-align: middle;
-  border: 1px solid #ddd;
+  @include standard-border(true);
   // @include shadow();
 }
 
@@ -148,25 +148,33 @@ a {
 
 // ==== Layout ====
 
-header.primary {
+#hero {
   @include wrapper(#f7f7f7);
   height: 100vh;
-  padding-top: 20vh;
-  h1 {
-    color: $brand-qrohlf;
-    // color: $material-gray-700;
-  }
+  header {
+    padding-top: 20vh;
+    @include clearfix();
+    h1 {
+      color: $brand-qrohlf;
+      // color: $material-gray-700;
+    }
 
-  h2 { @extend .sr-only; }
-  nav ul { @extend .nav-chips; }
+    h2 { @extend .sr-only; }
+    nav ul { @extend .nav-chips; }
 
-  font-size: 1.25rem;
-  p {
-    font-size: inherit;
-    text-style: italic;
+    font-size: 1.25rem;
     color: $material-gray-500;
+    p {
+      font-size: inherit;
+      text-style: italic;
+      // color: $material-gray-500;
+    }
+    text-align: center;
+
+    .number-widgets {
+      margin-top: 4rem;
+    }
   }
-  text-align: center;
 }
 
 main {
@@ -174,5 +182,5 @@ main {
 }
 
 footer.primary {
-  @include wrapper($material-light-blue);
+  @include wrapper(#00bcd4);
 }
