@@ -116,7 +116,7 @@ $bluegray: #3f5767;
 // =============================================================
 // =============================================================
 .colors-gray-bg {
-  @include color-scheme( $gray-100,
+  @include color-scheme( $gray-200,
                          $gray-700,
                          $light-blue-500,
                          $light-blue-700);
@@ -128,34 +128,25 @@ $bluegray: #3f5767;
                          #ddd,
                          #ccc);
   h1 {
-    color: $bluegray;
+    color: $brand-qrohlf;
   }
 }
 
 .colors-white-bg {
   @include color-scheme( white,
-                         $gray-700,
+                         $gray-800,
                          $light-blue-500,
                          $light-blue-700);
+  h1 {
+    color: $bluegray;
+  }
 }
 
-.colors-blue-bg {
-  //basic colors - background, links, text
-  @include color-scheme( lighten($bluegray, 20%),
-                         $gray-200,
-                         $light-blue-100,
-                         $light-blue-300);
-  //chip colors
-  @include chip-variant( darken($bluegray, 5%),
-                         darken($bluegray, 10%),
-                         $gray-200,
-                         $gray-100,
+.colors-header-footer {
+    @include color-scheme( white,
+                         $gray-700,
                          $bluegray,
-                         darken($bluegray, 5%));
-  h1 {
-    color: #00acc1;
-  }
-
+                         $light-blue-600);
 }
 
 .wrapper {
@@ -206,10 +197,8 @@ body {
   font-family: lato, sans-serif;
   // Base text size
   font-size: 1rem;
-  // Colors
-  @extend .colors-gray-bg;
-  // prevent margin collapse
-  padding-top: 1px;
+  // Default color scheme
+  @extend .colors-white-bg;
   // overflow: hidden;
 }
 
@@ -224,6 +213,7 @@ body {
 // }
 
 // ==== Typography ====
+// no colors here!
 
 // Heading defaults
 h1, h2, h3, h4, h5, h6 {
@@ -235,8 +225,6 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 4rem;
-  // color: $light-blue-800;
-  color: $brand-qrohlf;//#0097a7;
 }
 
 // Link defaults
@@ -250,9 +238,10 @@ a:hover {
 
 // ==== Components ====
 .content {
-  max-width: 600px;
-  padding: 1rem;
+  max-width: 700px;
   margin: 0 auto;
+  position: relative;
+  padding: 1rem;
 }
 
 // Chips are "action links" for navigation, etc.
@@ -292,7 +281,7 @@ a:hover {
   @include transition(all .2s ease);
   &:hover {
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
-    @include scale(1.04);
+    @include scale(1.06);
   }
   &::after {
     content: '';
@@ -313,22 +302,42 @@ a:hover {
 }
 
 .post {
-  position: relative;
-  .arrow-left {
-    position: absolute;
-    left: -6rem;
-    top: 4rem;
-  }
   .post-body {
+    margin-top: 3rem;
+    font-size: 1.25rem;
+    p {
+      line-height: 2rem;
+    }
     h1 {
       font-size: 3rem;
     }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+  }
+
+  .caption {
+    display: block;
+    text-align: center;
+    color: $gray-600;
   }
 }
 
 .post-meta {
   font-style: italic;
-  text-align: right;
+  // text-align: right;
+}
+
+hr {
+  background-color: $gray-400;
+  height: 1px;
+  border: none;
+  width: 100%;
 }
 
 // ==== Hero unit for landing page ====
@@ -371,10 +380,32 @@ a:hover {
 }
 
 // General page styles
-header {
-  @extend .colors-blue-bg;
-
+.post-header {
   padding: 1rem 0;
+}
+
+.page-header {
+  @extend .colors-header-footer;
+
+    a.homepage-link {
+      font-weight: bold;
+      color: $brand-qrohlf;
+    }
+
+  // Refactor this to share styles with nav-chips
+  nav {
+    float: right;
+      a {
+        display: inline-block;
+        margin: 0 1rem;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+  }
 }
 
 main {
@@ -382,11 +413,21 @@ main {
 }
 
 main.single-post-page {
-  @extend .colors-gray-bg;
-  .content {
-    max-width: 800px;
+  header {
+    @extend .colors-gray-bg;
+    .arrow-left {
+      position: absolute;
+      left: -6rem;
+      top: 40%;
+    }
+    .intro {
+      font-weight: 300;
+      // font-style: italic;
+      font-size: 1.5rem;
+      color: $gray-500;
+    }
   }
-  border-top: 0.5rem solid $brand-qrohlf-alt;
+  // border-top: 0.5rem solid $brand-qrohlf-alt;
 }
 
 nav {

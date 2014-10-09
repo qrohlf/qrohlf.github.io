@@ -20,9 +20,6 @@ layout: scaffold
           <article>
               <h2><a href="{{post.url}}">{{ post.title }}</a></h2>
               <p>{{ post.summary }}</p>
-              <footer class="post-meta">
-                <p>{{ post.date | date: "%d %h %Y" }}</p>
-              </footer>
           </article>
       {% endfor %}
     </section>
