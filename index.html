@@ -1,19 +1,38 @@
 ---
 layout: scaffold
 ---
-<div id="hero">
-  <header>
-    <div class="content">
-      <h1>Quinn Rohlf</h1>
-      <p>Professional adventurer &amp; maker of nice things. Joining <a href="http://newrelic.com/">New Relic</a> in June to help people do more with their data. <a href="https://github.com/qrohlf">@qrohlf</a> on GitHub. </p>
-      <h2>Navigation</h2>
-      <nav>
-        <ul>
-        <li><a href="/writing">Writing</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/about">About</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<div id="top-page">
+  <div id="hero">
+    <header>
+      <div class="content">
+        <h1>Quinn Rohlf</h1>
+        <p>Professional adventurer &amp; maker of nice things. Joining <a href="http://newrelic.com/">New Relic</a> in June to help people do more with their data. <a href="https://github.com/qrohlf">@qrohlf</a> on GitHub. </p>
+        <h2>Navigation</h2>
+        <nav>
+          <ul>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
+  <a class="down-arrow" href="#writing"></a>
 </div>
+<main>
+  <div class="content">
+    <section class="post-index">
+      <h1 id="writing">Writing</h1>
+      {% for post in site.posts %}
+          <article>
+              <h2><a href="{{post.url}}">{{ post.title }}</a></h2>
+              <p>{{ post.summary }}</p>
+              <footer class="post-meta">
+                <p>{{ post.date | date: "%d %h %Y" }}</p>
+              </footer>
+          </article>
+      {% endfor %}
+    </section>
+  </div>
+</main>
