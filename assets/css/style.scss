@@ -116,7 +116,7 @@ $bluegray: #3f5767;
 // =============================================================
 // =============================================================
 .colors-gray-bg {
-  @include color-scheme( $gray-200,
+  @include color-scheme( #E1F2FF,
                          $gray-700,
                          $light-blue-500,
                          $light-blue-700);
@@ -132,14 +132,21 @@ $bluegray: #3f5767;
   }
 }
 
+.colors-blue-bg {
+  @include color-scheme( $light-blue-600,
+                       $light-blue-200,
+                       $gray-200,
+                       white);
+  h1 {
+    color: white;
+  }
+}
+
 .colors-white-bg {
   @include color-scheme( white,
                          $gray-800,
                          $light-blue-500,
                          $light-blue-700);
-  h1 {
-    color: $bluegray;
-  }
 }
 
 .colors-header-footer {
@@ -302,9 +309,10 @@ a:hover {
 }
 
 .post {
+  margin-top: 2rem;
   .post-body {
-    margin-top: 3rem;
-    font-size: 1.25rem;
+    margin-top: 2rem;
+    font-size: 1.15rem;
     p {
       line-height: 2rem;
     }
@@ -325,12 +333,15 @@ a:hover {
     display: block;
     text-align: center;
     color: $gray-600;
+    font-style: italic;
+    font-size: 1rem;
   }
 }
 
 .post-meta {
   font-style: italic;
   // text-align: right;
+  color: $gray-500;
 }
 
 hr {
@@ -355,7 +366,6 @@ hr {
 
   h1 {
     margin-top: 0;
-    color: $brand-qrohlf;
     font-size: 2rem;
   }
 
@@ -365,8 +375,8 @@ hr {
 }
 
 #top-page {
-  // @extend .colors-blue-bg; definitely not a good place for a dark background
-  @extend .colors-gray-bg;
+  @extend .colors-blue-bg;
+  // @extend .colors-gray-bg;
   min-height: 100vh;
   position: relative;
   // Position the arrow
@@ -408,13 +418,17 @@ hr {
   }
 }
 
+.page-footer {
+  color: $gray-500;
+}
+
 main {
   @extend .colors-white-bg;
 }
 
 main.single-post-page {
   header {
-    @extend .colors-gray-bg;
+    @extend .colors-blue-bg;
     .arrow-left {
       position: absolute;
       left: -6rem;
@@ -424,7 +438,7 @@ main.single-post-page {
       font-weight: 300;
       // font-style: italic;
       font-size: 1.5rem;
-      color: $gray-500;
+      color: $light-blue-200;
     }
   }
   // border-top: 0.5rem solid $brand-qrohlf-alt;

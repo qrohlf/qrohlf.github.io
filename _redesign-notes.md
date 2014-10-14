@@ -1,5 +1,19 @@
 # Redesign Notes
 
+## Todo
+
+- Implement page layouts for projects and about
+- Fix the page-header on small screens
+- Clean up markup and CSS
+- <code> styles (maybe port them over from the old codebase)
+
+## Components
+.hero should be the top-level container for the hero unit used on the homepage
+.navigation should be the top-header shown on pages
+.page-header is a title/subtitle combo
+.page-content is the textual content of a page
+.postscript is the text that appears on the bottom of all pages
+
 ## Inspirations:
 
 - Original design inspiration: http://warpspire.com
