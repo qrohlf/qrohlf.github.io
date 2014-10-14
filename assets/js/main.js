@@ -6,3 +6,8 @@
   ga('create', 'UA-40241848-1', 'qrohlf.com');
   ga('require', 'displayfeatures');
   ga('send', 'pageview');
+
+$(document).ready( function() {
+  $('a').smoothScroll();
+}
+);
