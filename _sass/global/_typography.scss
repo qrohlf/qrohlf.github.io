@@ -1,0 +1,24 @@
+// =============================================================
+// =============================================================
+//
+// Typography - defaults
+//
+// =============================================================
+// =============================================================
+
+// Heading defaults
+h1, h2, h3, h4, h5, h6 {
+  // Only bold the headers that need bold
+  font-weight: normal;
+  // Reset the margins
+  margin-bottom: 0;
+}
+
+// Link defaults
+a {
+  @include transition(color .2s ease);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}

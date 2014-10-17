@@ -1,0 +1,26 @@
+// =============================================================
+// =============================================================
+//
+// Masthead component - for page & article titles
+//
+// =============================================================
+// =============================================================
+
+.masthead {
+  @extend .colors-blue-dark;
+  .arrow-left {
+    position: absolute;
+    left: -6rem;
+    top: 40%;
+  }
+  .intro {
+    font-weight: 300;
+    // font-style: italic;
+    font-size: 1.5rem;
+    color: $light-blue-200;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}

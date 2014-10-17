@@ -1,24 +1,20 @@
 ---
 layout: scaffold
 ---
-<header class="page-header">
+<div class="navbar">
   <div class="content">
-    <nav>
-      <a href="/#writing">Writing</a>
-      <a href="#">Projects</a>
-      <a href="#">GitHub</a>
-      <a href="#">Twitter</a>
-    </nav>
-    <a class="homepage-link" href="/">@qrohlf</a>
+    <a href="/" class="brand-link">@qrohlf</a>
+    {% include nav.html %}
   </div>
-</header>
-<main class="single-post-page">
-  <header class="post-header">
+</div>
+<header class="masthead">
     <div class="content">
       <a href="/#writing" class="arrow-left"></a><h1>{{page.title}}</h1>
       <p class="intro">{{page.summary}}</p>
     </div>
   </header>
+<main class="single-post-page">
+
   <div class="content">
     <div class="post">
       <footer class="post-meta">

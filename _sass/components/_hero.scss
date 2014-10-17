@@ -1,0 +1,47 @@
+// =============================================================
+// =============================================================
+//
+// Hero component - for landing page top
+//
+// =============================================================
+// =============================================================
+
+.hero {
+  @extend .colors-blue-dark;
+  min-height: 100vh;
+  position: relative;
+  // Position the arrow
+  .arrow-down {
+    position: absolute;
+    //15% is the minimum needed to clear the navigation bar on iOS8 mobile Safari
+    bottom: 15%; //FIXME this looks bad in landscape orientation. Should either set a pixel min height on the top page, or fix somehow.
+    left: 50%;
+    margin-left: -1.5rem;
+  }
+
+  .hero-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 40%;
+    text-align: left;
+    font-size: 1.25rem;
+
+    .content {
+      @include translate(0, -50%);
+      h1 {
+        margin-top: 0;
+        font-size: 2rem;
+      }
+
+      h2 {
+        @extend .sr-only;
+      }
+
+      nav li {
+        @extend .chip;
+        color: $gray-200;
+      }
+    }
+  }
+}

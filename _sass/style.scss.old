@@ -1,0 +1,332 @@
+@charset "UTF-8";
+
+
+// =============================================================
+// =============================================================
+//
+// Bootstrap bits
+//
+// =============================================================
+// =============================================================
+
+// Just a little bootstrap
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/normalize";
+// @import "bootstrap/scaffolding";
+@import "bootstrap/grid";
+
+
+// =============================================================
+// =============================================================
+//
+// Mixins
+//
+// =============================================================
+// =============================================================
+
+@mixin color-scheme( $background,
+                     $text,
+                     $link,
+                     $link-hover,
+                     $border-color: false,
+                     $border-color-hover: false) {
+  background: $background;
+  color: $text;
+  a {
+    color: $link;
+  }
+  a:hover {
+    color: $link-hover;
+  }
+  @if $border-color {
+    border-color: $border-color;
+  }
+  @if $border-color-hover {
+    &:hover {
+      border-color: $border-color-hover;
+    }
+  }
+}
+
+@mixin chip-variant( $background,
+                     $background-hover,
+                     $text,
+                     $text-hover,
+                     $border,
+                     $border-hover) {
+  .chip {
+    background: $background;
+    border-color: $border;
+    color: $text;
+    &:hover {
+      color: $text-hover;
+      border-color: $border-hover;
+      background: $background-hover;
+    }
+    a, a:hover {
+      color: inherit;
+    }
+  }
+}
+
+// =============================================================
+// =============================================================
+//
+// Utility Classes
+//
+// =============================================================
+// =============================================================
+.colors-gray-bg {
+  @include color-scheme( #E1F2FF,
+                         $gray-700,
+                         $light-blue-500,
+                         $light-blue-700);
+    //chip colors
+  @include chip-variant( white,
+                         white,
+                         $gray-600,
+                         $gray-700,
+                         #ddd,
+                         #ccc);
+  h1 {
+    color: $brand-qrohlf;
+  }
+}
+
+.colors-header-footer {
+    @include color-scheme( white,
+                         $gray-700,
+                         $bluegray,
+                         $light-blue-600);
+}
+
+.wrapper {
+  margin: 0 0;
+  padding: 1rem;
+  @include clearfix();
+}
+
+
+// =============================================================
+// =============================================================
+//
+// Global Setup
+//
+// =============================================================
+// =============================================================
+
+$footer-height: 80px;
+
+html {
+  // Sticky Footer
+  position: relative;
+  min-height: 100%;
+  // rem units - 1rem == 16px
+  font-size: 16px; // 1rem == 16px
+}
+
+body {
+  margin: 0 0;
+  // Sticky footer
+  // margin: 0 0 $footer-height; /* bottom = footer height */
+  // Nice font
+  font-family: lato, sans-serif;
+  // Base text size
+  font-size: 1rem;
+  // Default color scheme
+  @extend .colors-white-bg;
+  // overflow: hidden;
+}
+
+// Sticky footer stuff
+// footer {
+//   @extend .wrapper;
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   height: $footer-height;
+// }
+
+
+// ==== Components ====
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  padding: 1rem;
+}
+
+
+
+
+.arrow-down {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  @include transition(all .2s ease);
+  &:hover {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
+    @include scale(1.06);
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    background: url(/images/arrow-down.png) center no-repeat;
+    height: 3rem;
+    width: 3rem;
+    background-size: 100%;
+    opacity: 0.5;
+  }
+}
+
+.arrow-left {
+  @extend .arrow-down;
+  &::after {
+    @include rotate(90deg);
+  }
+}
+
+.post {
+  margin-top: 2rem;
+  .post-body {
+    margin-top: 2rem;
+    font-size: 1.15rem;
+    p {
+      line-height: 2rem;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+  }
+
+  .caption {
+    display: block;
+    text-align: center;
+    color: $gray-600;
+    font-style: italic;
+    font-size: 1rem;
+  }
+}
+
+.post-meta {
+  font-style: italic;
+  // text-align: right;
+  color: $gray-500;
+}
+
+hr {
+  background-color: $gray-400;
+  height: 1px;
+  border: none;
+  width: 100%;
+}
+
+// ==== Hero unit for landing page ====
+#hero {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40%;
+  text-align: left;
+  font-size: 1.25rem;
+
+  .content {
+    @include translate(0, -50%);
+  }
+
+  h1 {
+    margin-top: 0;
+    font-size: 2rem;
+  }
+
+  h2 {
+    @extend .sr-only;
+  }
+}
+
+#top-page {
+  @extend .colors-blue-bg;
+  // @extend .colors-gray-bg;
+  min-height: 100vh;
+  position: relative;
+  // Position the arrow
+  .arrow-down {
+    position: absolute;
+    //15% is the minimum needed to clear the navigation bar on iOS8 mobile Safari
+    bottom: 15%; //FIXME this looks bad in landscape orientation. Should either set a pixel min height on the top page, or fix somehow.
+    left: 50%;
+    margin-left: -1.5rem;
+  }
+}
+
+// General page styles
+.post-header {
+  padding: 1rem 0;
+}
+
+.page-header {
+  @extend .colors-header-footer;
+
+    a.homepage-link {
+      font-weight: bold;
+      color: $brand-qrohlf;
+    }
+
+  // Refactor this to share styles with nav-chips
+  nav {
+    float: right;
+      a {
+        display: inline-block;
+        margin: 0 1rem;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+  }
+}
+
+.page-footer {
+  color: $gray-500;
+}
+
+main {
+  @extend .colors-white-bg;
+}
+
+main.single-post-page {
+  header {
+    @extend .colors-blue-bg;
+    .arrow-left {
+      position: absolute;
+      left: -6rem;
+      top: 40%;
+    }
+    .intro {
+      font-weight: 300;
+      // font-style: italic;
+      font-size: 1.5rem;
+      color: $light-blue-200;
+    }
+  }
+  // border-top: 0.5rem solid $brand-qrohlf-alt;
+}
+
+nav {
+  ul {@extend .nav-chips;}
+}

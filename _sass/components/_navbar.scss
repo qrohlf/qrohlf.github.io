@@ -1,0 +1,13 @@
+.navbar {
+  .content {
+    .brand-link {
+      float: left;
+    }
+
+    nav {
+      float: right;
+    }
+
+    @extend .clearfix;
+  }
+}
