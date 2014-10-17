@@ -8,5 +8,5 @@ poole:
     word_separator: "-"
 include: [".well-known"]
 sass:
-    sass_dir: assets/_bower/bootstrap-sass-official/assets/stylesheets/
+    sass_dir: _sass
     sourcemap: true
