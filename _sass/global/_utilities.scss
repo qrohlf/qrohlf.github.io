@@ -21,14 +21,6 @@
   border: 0;
 }
 
-// Content padding & width-limiting
-.content {
-  max-width: 700px;
-  margin: 0 auto;
-  position: relative;
-  padding: 1rem;
-}
-
 // Spaced out inline navigation
 ul.inline-nav {
   list-style-type: none;
@@ -60,14 +52,19 @@ ul.inline-nav {
   @include transition(all .2s ease);
 }
 
+// global light source means all shadows are the same
+.shadow {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
 // Arrows are arrows
 .arrow-down {
+  @extend .shadow;
   display: inline-block;
   height: 3rem;
   width: 3rem;
   background: white;
   border-radius: 50%;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
   @include transition(all .2s ease);
   &:hover {
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4);
@@ -94,4 +91,22 @@ ul.inline-nav {
 // Bootstrap clearfix:
 .clearfix {
   @include clearfix();
+}
+
+hr {
+  display: block;
+  border: none;
+  color: inherit;
+  height: auto;
+
+  &::before {
+    display: block;
+    content: '···';
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+}
+
+.text-right {
+  text-align: right;
 }

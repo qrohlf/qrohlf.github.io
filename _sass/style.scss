@@ -5,11 +5,13 @@
 //
 // =============================================================
 // =============================================================
+@charset "UTF-8";
 
 // Some basic bootstrap imports
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 @import "bootstrap/normalize";
+@import "bootstrap/grid";
 
 // Color schemes
 @import "global/colors";
@@ -20,10 +22,16 @@
 // Typography
 @import "global/typography";
 
+// Code Highlighting
+@import "global/syntax-highlight";
+
 // Components
 @import "components/masthead";
 @import "components/hero";
 @import "components/navbar";
+@import "components/colophon";
+@import "components/page";
+@import "components/project-list";
 
 
 // =============================================================
@@ -38,6 +46,7 @@ html {
   min-height: 100%;
   font-size: 16px; // 1rem == 16px
   box-sizing: border-box;
+  min-width: 320px;
 }
 
 body {
@@ -49,4 +58,12 @@ body {
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+// Content padding & width-limiting
+.content {
+  max-width: calc(700px + 2rem);
+  margin: 0 auto;
+  position: relative;
+  padding: 1rem;
 }

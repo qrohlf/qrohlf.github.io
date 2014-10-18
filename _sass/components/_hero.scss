@@ -19,6 +19,17 @@
     margin-left: -1.5rem;
   }
 
+  @media screen and (max-width: 480px) {
+    nav { display: none; }
+    .arrow-down {
+      bottom: 20%;
+    }
+  }
+
+  @media screen and (max-height: 380px) {
+    .arrow-down {display: none;}
+  }
+
   .hero-wrapper {
     position: absolute;
     left: 0;
@@ -41,6 +52,14 @@
       nav li {
         @extend .chip;
         color: $gray-200;
+      }
+
+      p {
+        margin-bottom: 2rem;
+      }
+
+      a:hover {
+        text-decoration: underline;
       }
     }
   }

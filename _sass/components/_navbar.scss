@@ -1,13 +1,32 @@
 .navbar {
   .content {
     .brand-link {
+      display: inline-block;
       float: left;
+      font-weight: bold;
+      color: $brand-qrohlf;
     }
 
     nav {
       float: right;
+      li {
+        margin: 0 1rem;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      a {
+        color: $gray-600;
+      }
+      a:hover {
+        color: $light-blue-500;
+      }
     }
 
     @extend .clearfix;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: 0.8rem;
   }
 }

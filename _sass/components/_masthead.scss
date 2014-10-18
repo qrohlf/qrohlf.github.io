@@ -8,10 +8,12 @@
 
 .masthead {
   @extend .colors-blue-dark;
+  padding: 2rem 0;
   .arrow-left {
     position: absolute;
     left: -6rem;
-    top: 40%;
+    top: 50%;
+    margin-top: calc(-48px / 2);
   }
   .intro {
     font-weight: 300;
@@ -22,5 +24,13 @@
 
   h1 {
     font-size: 4rem;
+    margin: 0;
+    @media screen and (max-width: 480px) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    margin: 0;
   }
 }

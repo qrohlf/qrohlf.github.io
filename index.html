@@ -14,14 +14,7 @@ layout: scaffold
 </div>
 <main>
   <div class="content">
-    <section class="post-index">
-      <h1 id="writing">Writing</h1>
-      {% for post in site.posts %}
-          <article>
-              <h2><a href="{{post.url}}">{{ post.title }}</a></h2>
-              <p>{{ post.summary }}</p>
-          </article>
-      {% endfor %}
-    </section>
+    <h1 id="writing">Writing</h1>
+    {% include post-index.html %}
   </div>
 </main>
