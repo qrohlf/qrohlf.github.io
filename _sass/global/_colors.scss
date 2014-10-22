@@ -39,7 +39,7 @@ $bluegray: #3f5767;
 .colors-blue-dark {
   background: $light-blue-600;
   color: $light-blue-200;
-  a {
+  a, a:visited {
     color: $gray-200;
   }
 
@@ -55,7 +55,7 @@ $bluegray: #3f5767;
 .colors-default-light {
   background: $white;
   color: $gray-700;
-  a {
+  a, a:visited {
     color: $light-blue-500;
   }
 
