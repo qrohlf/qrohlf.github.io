@@ -50,12 +50,11 @@
       }
 
       nav li {
-        @extend .chip;
-        color: $gray-200;
+        font-size: 1rem;
       }
 
       p {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
       }
     }
   }

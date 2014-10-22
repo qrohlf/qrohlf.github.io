@@ -17,4 +17,10 @@
   .project-description {
     @extend .col-md-6;
   }
+
+  @media screen and (min-width: $screen-md-min) {
+    h2 {
+      margin-top: 0;
+    }
+  }
 }

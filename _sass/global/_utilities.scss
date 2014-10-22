@@ -29,12 +29,18 @@ ul.inline-nav {
 
   li {
     display: inline-block;
-    margin: 0 0.5rem;
+    padding: 0 0;
     &:first-child {
       margin-left: 0;
     }
     &:last-child {
       margin-right: 0;
+    }
+    &::after {
+      content: ' · ';
+    }
+    &:last-child::after {
+      content: '';
     }
   }
 }
@@ -48,7 +54,7 @@ ul.inline-nav {
   height: 2rem;
   line-height: 2rem;
   border: 1px solid;
-  border-radius: 3px;
+  border-radius: 5px;
   @include transition(all .2s ease);
 }
 
