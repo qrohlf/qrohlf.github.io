@@ -1,5 +1,8 @@
 .navbar {
+  @extend .colors-blue-dark;
   .content {
+    font-size: 0.9rem;
+
     .brand-link {
       display: inline-block;
       float: left;

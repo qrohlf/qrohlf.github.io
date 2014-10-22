@@ -44,14 +44,14 @@
 html {
   position: relative;
   min-height: 100%;
-  font-size: 16px; // 1rem == 16px
+  font-size: 18px; // 1rem == 16px
   box-sizing: border-box;
   min-width: 320px;
 }
 
 body {
   margin: 0 0;
-  font-family: lato, sans-serif;
+  font-family: "proxima-nova", sans-serif;
   font-size: 1rem;
   @extend .colors-default-light;
 }
