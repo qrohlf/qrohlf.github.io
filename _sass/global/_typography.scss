@@ -48,3 +48,8 @@ pre {
   overflow: auto;
   line-height: 1.5;
 }
+
+blockquote {
+  border-left: 5px solid $gray-200;
+  padding-left: 10px;
+}
