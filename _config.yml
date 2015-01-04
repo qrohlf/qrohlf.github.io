@@ -2,6 +2,8 @@ description: A blog about startups, technology, and other interesting things.
 url: http://qrohlf.com
 permalink: /posts/:title
 markdown: redcarpet
+redcarpet:
+    extensions: [with_toc_data]
 future: true
 poole:
     word_separator: "-"
