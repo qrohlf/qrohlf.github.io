@@ -7,13 +7,17 @@ date: 2014-12-26
 
 ![project difficulty graph](/images/blinky/project_difficulty_graph.jpg)
 
-One of the first projects that I pursued to help teach me the basics of electronics and gizmo-making was a miniature TV-B-Gone. Now, I've put together a kit so that others can do the same. 
+One of the first projects that I pursued to help teach me the basics of electronics and gizmo-making was a miniature TV-B-Gone. I liked it because it struck a good balance between not being overwhelming to build (it only uses about a dozen components) while still producing some fairly advanced functionality. When I was looking into starting up an electronics/hacker meetup at my school, it immediately came to mind as a great beginner project. I started looking into commercially available kits, and was put off by how they really don't provide a good stepping stone from kit building into DIY hobbyist electronics.
 
-However, this kit is a little different from most. One of the things that has always bothered me about normal "learn electronics" kits is that they're typically very on-the-rails experiences that create a high barrier to entry to making your own stuff - it's a big jump from soldering stuff onto a labeled, professionally fabricated PCB to designing your own similarly-professional hardware. I'm attempting to bridge that gap with a "kit" that's made entirely out of off the shelf parts, with no fancy custom-etched PCB or pre-programmed components. The idea is that a beginner could easily put it together and produce a reasonably polished end result, and then use the same tools & techniques from the kit to start designing their own hardware. 
+One of the things that has always bothered me about normal "learn electronics" kits is that they're typically very on-the-rails experiences that create a high barrier to entry to making your own stuff - it's a big jump from soldering pre-packaged parts onto a labeled, professionally fabricated PCB to designing and ordering your own similarly-professional hardware. To re-create the Adafruit TV-B-Gone kit from scratch, you'd have to learn how to use EAGLE to edit schematics and design PCBs, then either learn to etch your own PCBs or navigate the confusing landscape of small-run PCB manufacturing services.
 
-This post will walk you through building  "Blinky", a micro-sized TV-B-Gone clone that will fit inside an Altoids smalls tin and turn off nearly any TV at a range of 15-20 feet.
+I'm attempting to bridge that gap with a "kit" that's made entirely out of off the shelf parts, with no fancy custom-etched PCB or pre-programmed components.  Just like a lot of my hobby designs, it's first assembled on a breadboard before being soldered with perfboard. The idea is that a beginner could easily put it together and produce a reasonably polished end result, and then use the same tools & techniques from the kit to start designing their own projects. I'm putting together a number of kits to bring to my school's "hack night" meetings for anyone interested in learning about electronics.
 
-# Parts & Tools - TODO
+This post was made possible by a grant from the [Lewis & Clark Center for Entreprenuership](https://college.lclark.edu/programs/entrepreneurship/), was inspired in part by [this instructable](http://www.instructables.com/id/350-DIY-TV-B-Gone-Mico/), and owes its existience to Lady Ada & Mitch Altman's open-source [TV-B-Gone](https://learn.adafruit.com/tv-b-gone-kit/overview) code and schematics. 
+
+The rest of this post will walk you through building the kit, which I've named "Blinky". In the end, you'll have a micro-sized TV-B-Gone clone that will fit inside an Altoids smalls tin and can turn off nearly any TV at a range of 15-20 feet.
+
+# Parts & Tools
 
 **To build a Blinky, you will need the following parts:**
 
@@ -27,11 +31,11 @@ This post will walk you through building  "Blinky", a micro-sized TV-B-Gone clon
 - 2 × PN2222 NPN Transistors ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=PN2222ABUvirtualkey51210000virtualkey512-PN2222ABU))
 - 1 × 220µF Capacitor ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=ECA-0JM221Ivirtualkey66720000virtualkey667-ECA-0JM221I))
 - 1 × Green Indicator LED ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=WP3A8GDvirtualkey60400000virtualkey604-WP3A8GD))
-- 1 × Wide-Angle IR LED ([link](#))
-- 1 × Narrow-Beam IR LED ([link](#))
+- 1 × Wide-Angle IR LED ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=IR333C%2fH0%2fL10virtualkey63810000virtualkey638-IR333C%2fH0%2fL10))
+- 1 × Narrow-Beam IR LED ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=EL-IR333-Avirtualkey63810000virtualkey638-IR333-A))
 - 1 × Slim Tactile Switch ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=EVQ-PE604Tvirtualkey66720000virtualkey667-EVQ-PE604T))
-- 3 × 220Ω resistors ([link](#))
-- 1 × 47Ω resistor ([link](#))
+- 4 × 150Ω resistors ([link](http://www.mouser.com/ProductDetail/KOA-Speer/MF1-4DCT52R1500F2/?qs=%2fha2pyFadujx107AAlVRunDZ5yxoA6p7q1qMzvIyXf5F1unZHHB7JLHLzFzv5nCa))
+- 1 × 47Ω resistor ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=MFR-25FRF52-47Rvirtualkey57620000virtualkey603-MFR-25FRF52-47R))
 - 1 × Small Mint Tin Sized Prototype Board ([link](https://www.adafruit.com/products/1214))
 - 1 × Altoids Smalls Mint Tin ([link](http://www.amazon.com/Altoids-Peppermint-Sugarfree-Ounce-Count/dp/B00DY5ZNAU/ref=sr_1_6?ie=UTF8&qid=1419638389&sr=8-6&keywords=altoids+smalls))
 
@@ -40,17 +44,16 @@ This post will walk you through building  "Blinky", a micro-sized TV-B-Gone clon
 
 ![tools](/images/blinky/tools.jpg)
 
-***Need second picture with AVR Programmer, AVR Breakout, Breadboard, & Coin Cell Breakout here***
-
 - Soldering Iron (with holder & wet sponge) ([link](https://www.adafruit.com/products/2163), [cheaper option](https://www.sparkfun.com/products/9507))
 - Solder ([link](https://www.adafruit.com/products/1886) - you can also use [lead-free](https://www.adafruit.com/products/1930) solder, but it makes it a bit tricker)
 - Needle-Nosed Pliers ([link](https://www.adafruit.com/products/1368), [cheaper option](https://www.adafruit.com/products/146))
 - Flush Cutters ([link](https://www.adafruit.com/products/152), [cheaper option](https://www.sparkfun.com/products/8794))
 - Multimeter ([link](https://www.adafruit.com/products/2034), [cheaper option](https://www.sparkfun.com/products/12966))
+- Breadboard  ([link](https://www.adafruit.com/products/64))
+- Assorted solid-core wire (22 gauge recommended)
+- Coin Cell Breadboard Breakout ([link](https://www.adafruit.com/products/1871))
 - AVR Programmer ([link](https://www.adafruit.com/products/46))
 - AVR ISP Breadboard Adapter Kit ([link](https://www.adafruit.com/products/1465))
-- Breadboard  ([link](https://www.adafruit.com/products/64))
-- Coin Cell Breadboard Breakout ([link](https://www.adafruit.com/products/1871))
 
 **The following items are optional, but helpful:**
 
@@ -62,7 +65,7 @@ This post will walk you through building  "Blinky", a micro-sized TV-B-Gone clon
 
 # Programming Part 1: Wiring
 
-*If you're using a kit you got from me, your ATtiny is pre-programmed. You can skip straight to the [Building & Testing on a Breadboard](#building-&-testing-on-a-breadboard) section.*
+*If you're using a kit you got from me or at a Hack Night event, your ATtiny is pre-programmed. You can skip straight to the [Building & Testing on a Breadboard](#building-&-testing-on-a-breadboard) section.*
 
 This project works by using a microcontroller to send out a whole bunch of TV "off" signals. However, the microcontroller you just bought is blank - it doesn't have any code or TV "off" signals programmed into it yet. We'll use the AVR programmer along with some open-source code to program the microcontroller to send out TV codes whenever it is reset.
 
@@ -183,12 +186,12 @@ When the microcontroller wants to light up the LED, it will connect pin 7 to gro
 ![LED and resistor](/images/blinky/led_and_resistor.jpg)
 <span class="caption">LED and resistor</span>
 
-To make things a bit more breadboard-friendly, I like to put a kink in the positive lead of  LEDs with needlenose pliers, then trim the leads so they're about a centimeter long. This makes the components sit closer to the breadboard, keeping them out of the way while I'm working with other parts of the circuit.
+To make things a bit more breadboard-friendly, I like to put a kink in the positive lead of  LEDs with needle-nose pliers, then trim the leads so they're about a centimeter long. This makes the components sit closer to the breadboard, keeping them out of the way while I'm working with other parts of the circuit.
 
 ![trimmed components](/images/blinky/trimmed_components.jpg)
 <span class="caption">Trimmed leads</span>
 
-Here's the breadboard with the LED and resistor added. Notice how I've re-used the same row that the chip's positive power pin is on to power the LED - this has the same effect as wiring the LED's positive pin to power seperately would have, but it uses less space on the breadboard and keeps things a little bit tidier.
+Here's the breadboard with the LED and resistor added. Notice how I've re-used the same row that the chip's positive power pin is on to power the LED - this has the same effect as wiring the LED's positive pin to power separately would have, but it uses less space on the breadboard and keeps things a little bit tidier.
 
 ![with indicator](/images/blinky/with_indicator.jpg)
 <span class="caption">Circuit with indicator LED</span>
@@ -209,12 +212,12 @@ The actual infrared emitters are LEDs like the one we just installed as an indic
 ![transistors](/images/blinky/transistors.jpg)
 <span class="caption">Transistors. I've bent the leads with pliers to help them fit in the breadboard.</span>
 
-Our transistor has three pins, the *emitter*, the *base*, and the *collector*. Like LEDs, the direction of power matters to a transistor. We're going to connect the negative lead of the infrared LED to the collector of the transistor. The transistor base will be connected to the microcontroller, and the emmitter will be connected to ground. When the microcontroller tells the transistor to "turn on" by supplying voltage to the base, the transistor will act like a switch and conduct electricity between the collecter and emitter. This lets us control a lot more power than we could with just the microcontroller alone. 
+Our transistor has three pins, the *emitter*, the *base*, and the *collector*. Like LEDs, the direction of power matters to a transistor. We're going to connect the negative lead of the infrared LED to the collector of the transistor. The transistor base will be connected to the microcontroller, and the emitter will be connected to ground. When the microcontroller tells the transistor to "turn on" by supplying voltage to the base, the transistor will act like a switch and conduct electricity between the collector and emitter. This lets us control a lot more power than we could with just the microcontroller alone. 
 
 ![transistor pinout](/images/blinky/transistor_pinout.jpg)
 <span class="caption">PN2222 transistor pinout</span>
 
-Pins 5 & 6 on the microcontroller will be controlling our transistors. Connect both pins together with a small wire jumper. Put the transistors in the breadboard and connect each emitter to ground and use a 220Ω resistor to connect each base to pin 6 on the microcontroller. (The resistor performs a similar function to the resistor on the LED, limiting how much power the transistors draw.)
+Pins 5 & 6 on the microcontroller will be controlling our transistors. Connect both pins together with a small wire jumper. Put the transistors in the breadboard and connect each emitter to ground and use a 150Ω resistor to connect each base to pin 6 on the microcontroller. (The resistor performs a similar function to the resistor on the LED, limiting how much power the transistors draw.)
 
 ![transistors wired](/images/blinky/transistors_wired.jpg)
 <span class="caption">Transistor wiring</span>
@@ -229,15 +232,15 @@ Make a mental note which lead is which and cut the leads even so that you can in
 ![LED wiring complete](/images/blinky/leds_wired.jpg)
 <span class="caption">LED wiring</span>
 
-Finally, add the capacitor across the power rails. This will help provide consistient power to the LEDs while they're pulsing at very fast rates. The capacitor has a positive and a negative side, the negative side has a shorter lead and a stripe down it. Connect the negative lead of the capacitor to the negative side of the power rails and the positive side to positive. Again, leave the leads fairly long to help with soldering later. 
+Finally, add the capacitor across the power rails. This will help provide consistent power to the LEDs while they're pulsing at very fast rates. The capacitor has a positive and a negative side, the negative side has a shorter lead and a stripe down it. Connect the negative lead of the capacitor to the negative side of the power rails and the positive side to positive. Again, leave the leads fairly long to help with soldering later. 
 
 ![Power capacitor](/images/blinky/power_capacitor.jpg)
 <span class="caption">Power capacitor</span>
 
-You should now be ready to test out your tv-killing "Blinky" gizmo. Find a handy nearby TV (it's got to be the kind of TV that has a remote - a computer monitor or project won't work), make sure your battery switch is turned on, point the IR LEDs at the TV, and press the button. Within sixty seconds or so, you should see the TV turn off! When it does, you're ready to go on to the next step.
+You should now be ready to test out your TV-killing "Blinky" gizmo. Find a handy nearby TV (it's got to be the kind of TV that has a remote - a computer monitor or project won't work), make sure your battery switch is turned on, point the IR LEDs at the TV, and press the button. Within sixty seconds or so, you should see the TV turn off! When it does, you're ready to go on to the next step.
 
 If you're having trouble getting your device to work, you can check and see if your IR LEDs are firing with a digital camera. Point the camera at the IR LEDs and watch the screen while activating the device. You should see rapid-fire pulses of light from the IR LEDS in the camera screen. If you're not seeing these, go back and double-check your wiring. (Note that this won't work with newer iPhones or any other camera that has an IR filter.)
 
 # Final Assembly
 
-Lots of pictures
+*Coming soon!*
