@@ -4,6 +4,8 @@ layout: post
 summary: I had a problem with a responsive column layout where multiples lines of text needed to be vertically centered inside the columns no matter how tall they were. This JQuery snippet fixed it.
 ---
 
+*Note: Don't use this. Really, don't. This post is here for historical reasons, and to remind me to be nice to junior devs because I was one too once.*
+
 In one of the responsive site designs that I worked on recently, I needed equal-height columns with background colors, dynamic widths and vertically centered text. The equal-height columns part has been covered in depth [elsewhere](https://www.google.com/search?q=equal+height+columns). I used Javascript for my solution, as the client wanted rounded corners - something difficult to fake with the pure CSS tricks out there without resorting to funky and un-semantic markup.
 
 The next challenge was how to vertically center the text within the columns. Because the text was multiline and the divs also included images, I couldn't just set `line-height` to match the container height and have done with it. Using `display: table;` and `display: table-cell;` to get vertical centering broke my layout - it also seemed like an ugly hack. So instead, I wrote up a short solution in JQuery. What it does is it finds how much empty space is left below the last element in the div, then adds half of that space to the top of a specified element within that div, resulting in the div being vertically centered. If the element specified by the text-identifier appears at the top of the div, the entire div contents will appear vertically centered. If the element appears at the end of the div content, the element will appear centered within the empty space at the end of the div.

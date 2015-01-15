@@ -1,6 +1,6 @@
 ---
-title: Blinky - A Micro TV Zapper Kit
-summary: ????
+title: Blinky
+summary: An electronics kit that makes it easy for people to start building their own hardware from scratch
 layout: post
 date: 2014-12-26
 ---
@@ -9,11 +9,11 @@ date: 2014-12-26
 
 One of the first projects that I pursued to help teach me the basics of electronics and gizmo-making was a miniature TV-B-Gone. Now, I've put together a kit so that others can do the same. 
 
-However, this kit is a little different from most. One of the things that always bothered me about normal "learn electronics" kits is that they're very on-the-rails experiences that create a high barrier to entry to making your own stuff - it's a big jump from soldering stuff onto a labeled, professionally fabricated PCB to designing your own similarly-professional hardware. I'm attempting to bridge that gap with a "kit" that's made entirely out of off the shelf parts, with no fancy custom-etched PCB or pre-programmed components. The idea is that a beginner could easily put it together and produce a reasonably polished end result, and then use the same tools & techniques from the kit to start designing their own hardware. 
+However, this kit is a little different from most. One of the things that has always bothered me about normal "learn electronics" kits is that they're typically very on-the-rails experiences that create a high barrier to entry to making your own stuff - it's a big jump from soldering stuff onto a labeled, professionally fabricated PCB to designing your own similarly-professional hardware. I'm attempting to bridge that gap with a "kit" that's made entirely out of off the shelf parts, with no fancy custom-etched PCB or pre-programmed components. The idea is that a beginner could easily put it together and produce a reasonably polished end result, and then use the same tools & techniques from the kit to start designing their own hardware. 
 
 This post will walk you through building  "Blinky", a micro-sized TV-B-Gone clone that will fit inside an Altoids smalls tin and turn off nearly any TV at a range of 15-20 feet.
 
-# Parts & Tools
+# Parts & Tools - TODO
 
 **To build a Blinky, you will need the following parts:**
 
@@ -26,8 +26,11 @@ This post will walk you through building  "Blinky", a micro-sized TV-B-Gone clon
 - 1 × 8MHz Ceramic Resonator ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=ZTT-8.00MTvirtualkey59070000virtualkey520-ZTT800MT))
 - 2 × PN2222 NPN Transistors ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=PN2222ABUvirtualkey51210000virtualkey512-PN2222ABU))
 - 1 × 220µF Capacitor ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=ECA-0JM221Ivirtualkey66720000virtualkey667-ECA-0JM221I))
-- 1 × Slim Tactile Switch ([link](https://www.adafruit.com/product/1489))
-- 2 × 220Ω resistors ([link](#))
+- 1 × Green Indicator LED ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=WP3A8GDvirtualkey60400000virtualkey604-WP3A8GD))
+- 1 × Wide-Angle IR LED ([link](#))
+- 1 × Narrow-Beam IR LED ([link](#))
+- 1 × Slim Tactile Switch ([link](http://www.mouser.com/Search/ProductDetail.aspx?R=EVQ-PE604Tvirtualkey66720000virtualkey667-EVQ-PE604T))
+- 3 × 220Ω resistors ([link](#))
 - 1 × 47Ω resistor ([link](#))
 - 1 × Small Mint Tin Sized Prototype Board ([link](https://www.adafruit.com/products/1214))
 - 1 × Altoids Smalls Mint Tin ([link](http://www.amazon.com/Altoids-Peppermint-Sugarfree-Ounce-Count/dp/B00DY5ZNAU/ref=sr_1_6?ie=UTF8&qid=1419638389&sr=8-6&keywords=altoids+smalls))
@@ -75,7 +78,7 @@ First, put the AVR programming adapter on the breadboard and connect the VCC and
 ![Power Rails Connected](/images/blinky/programmer_power.jpg)
 <span class="caption">ISP power connections</span>
 
-Next, we'll add the ATtiny85 chip. The pinout for this chip can be found in its [datasheet](/images/blinky/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf). On the physical chip, the top left of the chip will be marked with a small dot. If you plug the chip in backwards, it **will fry the chip**, so be careful and pay attention to the dot!
+<span id="add-attiny">Next</span>, we'll add the ATtiny85 chip. The pinout for this chip can be found in its [datasheet](/images/blinky/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf). On the physical chip, the top left of the chip will be marked with a small dot. If you plug the chip in backwards, it **will fry the chip**, so be careful and pay attention to the dot!
 
 ![Attiny85 Pinout](/images/blinky/attiny85_pinout.png)
 <span class="caption">ATtiny85 pinout</span>
@@ -149,7 +152,91 @@ If you see that, you've successfully programmed your ATtiny85 with the TV-B-Gone
 
 # Building & Testing on a Breadboard
 
-Once you've gotten all of your parts 
+Now it's time to wire up our TV-killer circuit. Circuits often come in the form of *schematics*. A circuit schematic is basically a map of how each part in a circuit gets connected together. Just like street maps, they're a simplified version of reality, and usually don't look much like the physical circuit at all. Here's the schematic for the circuit we're going to build:
+
+[![Basic Setup](/images/blinky/schematic_small.png)](/images/blinky/schematic_big.png)
+<span class="caption">The schematic. Click for a larger image.</span>
+
+If you don't understand it right now, don't worry - this page will walk you through building it a step at a time.
+
+We'll be building this circuit on a breadboard first to test it out, then transferring the working design to a prototype PCB. If you skipped the programming section and haven't used a breadboard before, take a moment to read this [solderless breadboard tutorial](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard). 
+
+If you're continuing from the programming section, remove the ISP header and all of the wires coming from it, leaving only the ATtiny85, power connections, and oscillator. If you skipped the programming section, follow the instructions [above](#add-attiny) to plug the chip into the breadboard and wire it up to the power rails and oscillator. Ignore the MISO, MOSI, SCK, and RESET wires. You should end up with something that looks like this, with pins 4 and 8 connected to power and pins 2 and 3 connected to the ceramic oscillator:
+
+![Basic Setup](/images/blinky/basic_connections.jpg)
+<span class="caption">Basic connections</span>
+
+Next, add the battery. Slot the CR2032 coin battery into the breadboard coin cell breakout and plug it in at the bottom of the breadboard. Make sure the siwtch on the breakout is in the "off" position and wire the pins labeled "Gnd" and "Sw" to the ground and positive power rails on the breadboard:
+
+![Battery Connections](/images/blinky/battery_connections.jpg)
+<span class="caption">When the battery breakout is switched on, the battery's positive and ground terminals will be connected to breadboard power rails.</span>
+
+The circuit we are making uses a small green LED to indicate when it's sending out TV codes. Because our circuit is running at 3v and the LED is designed for 2.5v, we'll use a small 47Ω resistor (the one with the yellow-purple-black-gold band pattern) to step the power down (the Ω symbol means "Ohm", a unit used to measure electrical resistance). If you're interested in learning about the calculation I used to get this value, Sparkfun has a pretty good [tutorial](https://www.sparkfun.com/tutorials/219) about LEDs and Ohm's law. LEDs have two leads - one longer and one shorter. For an LED to light up, the shorter negative lead needs to be connected to ground, and the longer positive lead needs to be connected to the positive terminal of the battery. 
+
+We'll connect the LED to pin 7 on our microcontroller, since that's where the code we programmed it with expects the indicator LED to be connected. As a reminder, here's the pinout for our microcontroller:
+
+![Attiny85 Pinout](/images/blinky/attiny85_pinout.png)
+<span class="caption">ATtiny85 pinout</span>
+
+When the microcontroller wants to light up the LED, it will connect pin 7 to ground, so we'll connect the negative lead of the led to the pin and the positive lead to the positive power rail. The resistor we're using can either go between the negative lead and the microcontroller, or between the positive lead and the power rail. Since the schematic shows it between the negative lead and the microcontroller, that's where I'm going to put it.
+
+![LED and resistor](/images/blinky/led_and_resistor.jpg)
+<span class="caption">LED and resistor</span>
+
+To make things a bit more breadboard-friendly, I like to put a kink in the positive lead of  LEDs with needlenose pliers, then trim the leads so they're about a centimeter long. This makes the components sit closer to the breadboard, keeping them out of the way while I'm working with other parts of the circuit.
+
+![trimmed components](/images/blinky/trimmed_components.jpg)
+<span class="caption">Trimmed leads</span>
+
+Here's the breadboard with the LED and resistor added. Notice how I've re-used the same row that the chip's positive power pin is on to power the LED - this has the same effect as wiring the LED's positive pin to power seperately would have, but it uses less space on the breadboard and keeps things a little bit tidier.
+
+![with indicator](/images/blinky/with_indicator.jpg)
+<span class="caption">Circuit with indicator LED</span>
+
+Next, we'll add the reset switch. This will go between the reset pin (pin 1) on the microcontroller and ground. When it's pressed, the microcontroller will reset and start spitting out TV codes. These switches come with kinked leads - it helps to flatten them out with pliers before trying to plug the switch into the breadboard. Here's what the circuit looks like with the switch installed on pin 1 of the microcontroller and connected to ground:
+
+![with indicator](/images/blinky/with_switch.jpg)
+<span class="caption">Circuit with switch</span>
+
+We are now ready to do a basic test of the circuit! Double-check that the ATtiny is plugged in in the correct orientation (with the dot in the upper left corner) and switch on the power from the battery. Then press the switch (just press it, don't hold it down). If you've wired everything correctly, the green indicator LED should start to blink. This means that the microcontroller is ready to send out codes!
+
+If you don't see the indicator LED blinking, double check all of your connections and make sure your battery isn't dead and that it's connected properly by checking the voltage on your breadboard's power rails with your multimeter.
+
+Once you've verified that your circuit works by getting the indicator LED to blink when the reset button is clicked, it's time to add the infrared transmitter. This part of the circuit will send out powerful infrared signals based on input from the microcontroller, turning off any TV nearby by cycling through a bunch of different TV manufacturer on/off codes. 
+
+The actual infrared emitters are LEDs like the one we just installed as an indicator light. However, these LEDs emit light in the infrared part of the spectrum that TV remotes use (940nm). They're also a lot more powerful, and unlike the little green LED our microcontroller can't actually handle switching all of the power that they need to activate. Instead, we'll be using the microcontroller to control another more powerful switch called a transistor.
+
+![transistors](/images/blinky/transistors.jpg)
+<span class="caption">Transistors. I've bent the leads with pliers to help them fit in the breadboard.</span>
+
+Our transistor has three pins, the *emitter*, the *base*, and the *collector*. Like LEDs, the direction of power matters to a transistor. We're going to connect the negative lead of the infrared LED to the collector of the transistor. The transistor base will be connected to the microcontroller, and the emmitter will be connected to ground. When the microcontroller tells the transistor to "turn on" by supplying voltage to the base, the transistor will act like a switch and conduct electricity between the collecter and emitter. This lets us control a lot more power than we could with just the microcontroller alone. 
+
+![transistor pinout](/images/blinky/transistor_pinout.jpg)
+<span class="caption">PN2222 transistor pinout</span>
+
+Pins 5 & 6 on the microcontroller will be controlling our transistors. Connect both pins together with a small wire jumper. Put the transistors in the breadboard and connect each emitter to ground and use a 220Ω resistor to connect each base to pin 6 on the microcontroller. (The resistor performs a similar function to the resistor on the LED, limiting how much power the transistors draw.)
+
+![transistors wired](/images/blinky/transistors_wired.jpg)
+<span class="caption">Transistor wiring</span>
+
+The final step is to wire up our infrared LEDs to our transistors. We want our LEDs to point forwards so we don't have to hold our device sideways to point it at a TV. Take your pliers and bend the long (positive) lead of both IR LEDs straight down. Then bend the shorter (negative) lead at a slightly farther distance, so that it parallels the positive lead with about an 0.1" gap between the two leads.
+
+![IR leds](/images/blinky/IR_leds.jpg)
+<span class="caption">lead-bending is an art</span>
+
+Make a mental note which lead is which and cut the leads even so that you can install the LEDs into the breadboard. Leave the leads fairly long, since this will make soldering easier later on. Connect the positive leads to the positive power rail on the breadboard, and the negative leads to the transistor collectors.
+
+![LED wiring complete](/images/blinky/leds_wired.jpg)
+<span class="caption">LED wiring</span>
+
+Finally, add the capacitor across the power rails. This will help provide consistient power to the LEDs while they're pulsing at very fast rates. The capacitor has a positive and a negative side, the negative side has a shorter lead and a stripe down it. Connect the negative lead of the capacitor to the negative side of the power rails and the positive side to positive. Again, leave the leads fairly long to help with soldering later. 
+
+![Power capacitor](/images/blinky/power_capacitor.jpg)
+<span class="caption">Power capacitor</span>
+
+You should now be ready to test out your tv-killing "Blinky" gizmo. Find a handy nearby TV (it's got to be the kind of TV that has a remote - a computer monitor or project won't work), make sure your battery switch is turned on, point the IR LEDs at the TV, and press the button. Within sixty seconds or so, you should see the TV turn off! When it does, you're ready to go on to the next step.
+
+If you're having trouble getting your device to work, you can check and see if your IR LEDs are firing with a digital camera. Point the camera at the IR LEDs and watch the screen while activating the device. You should see rapid-fire pulses of light from the IR LEDS in the camera screen. If you're not seeing these, go back and double-check your wiring. (Note that this won't work with newer iPhones or any other camera that has an IR filter.)
 
 # Final Assembly
 
