@@ -81,7 +81,7 @@ First, put the AVR programming adapter on the breadboard and connect the VCC and
 ![Power Rails Connected](/images/blinky/programmer_power.jpg)
 <span class="caption">ISP power connections</span>
 
-<span id="add-attiny">Next</span>, we'll add the ATtiny85 chip. The pinout for this chip can be found in its [datasheet](/images/blinky/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf). On the physical chip, the top left of the chip will be marked with a small dot. If you plug the chip in backwards, it **will fry the chip**, so be careful and pay attention to the dot!
+<span id="add-attiny">Next</span>, we'll add the ATtiny85 chip. The pinout for this chip can be found in its [datasheet](/images/blinky/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf). On the physical chip, the top left of the chip (pin 1) will be marked with a small dot. If you plug the chip in backwards, it **can fry the chip**, so be careful and pay attention to the dot!
 
 ![Attiny85 Pinout](/images/blinky/attiny85_pinout.png)
 <span class="caption">ATtiny85 pinout</span>
