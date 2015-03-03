@@ -7,3 +7,4 @@ bourbon
 neat
 *.css.map
 images/_templates
+.jekyll-metadata
